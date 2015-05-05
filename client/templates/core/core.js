@@ -11,4 +11,12 @@ Template.core.rendered = function () {
 		Session.set('database', 'TamiolaDB');
 	});
 
+	// Enable the cards
+	$('[data-toggle="help"]').click(function(e) {
+		// prevent the default behavior -> setting the link URL with hashtag
+		e.preventDefault();
+		// display the off canvas help
+		console.log("Help...");
+	});
+
 }
