@@ -7,6 +7,8 @@ Template.core.rendered = function () {
 		e.preventDefault();
 		// display the tab of interest
 		$(this).tab('show');
+		// Retrieve the type of the database
+		Session.set('database', 'TamiolaDB');
 	});
 
 }
