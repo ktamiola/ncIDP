@@ -1,9 +1,11 @@
 // Invoked when template gets rendered
 Template.core.rendered = function () {
 
-	// Deal with the cards
+	// Enable the cards
 	$('[data-toggle="tabs"] a').click(function(e) {
+		// prevent the default behavior -> setting the link URL with hashtag
 		e.preventDefault();
+		// display the tab of interest
 		$(this).tab('show');
 	});
 
