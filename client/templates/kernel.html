@@ -1,40 +1,35 @@
 <!-- APPLICATION KERNEL TEMPLATE -->
 <template name="kernel">
 	
-	<!-- TEST CONTENT GOES HERE -->
-	<header id="header" >
-		<div class="headerbar">
-			<div class="headerbar-left">
-				<ul class="header-nav header-nav-options">
-					~ Left aligned navigation items ~
-				</ul>
-			</div>
-			<div class="headerbar-right">
-				<ul class="header-nav header-nav-options">
-					~ Right aligned navigation items ~
-				</ul>
-				<ul class="header-nav header-nav-profile">
-					~ Right aligned profile dropdown menu ~
-				</ul>
-				<ul class="header-nav header-nav-toggle">
-					~ Right aligned toggle items ~
-				</ul>
-			</div>
-		</div>
-	</header>
-	<div id="base">
-		<div class="offcanvas">
-			~ Left off-canvas content goes here ~
-		</div>
-		<div id="content">
-			~ Main content goes here ~
-		</div>
-		<div id="menubar">
-			~ Menubar content goes here ~
-		</div>
-		<div class="offcanvas">
-			~ Right off-canvas content goes here ~
-		</div>
-	</div>
+	<!-- BEGIN LOCKED SECTION -->
+		<section class="section-account">
+			<div class="img-backdrop" style="background-image: url('assets/img/img16.jpg')"></div>
+			<div class="spacer"></div>
+			<div class="card contain-xs style-transparent">
+				<div class="card-body">
+					<div class="row">
+						<div class="col-sm-12">
+							<img class="img-circle" src="assets/img/avatar1.jpg?1403934956" alt="" />
+							<h2>Daniel Johnson</h2>
+							<form class="form" action="#" accept-charset="utf-8" method="post">
+								<div class="form-group floating-label">
+									<div class="input-group">
+										<div class="input-group-content">
+											<input type="password" id="password" class="form-control" name="password">
+											<label for="password">Password</label>
+											<p class="help-block"><a href="#">Not Daniel Johnson?</a></p>
+										</div>
+										<div class="input-group-btn">
+											<button class="btn btn-floating-action btn-primary" type="submit"><i class="fa fa-unlock"></i></button>
+										</div>
+									</div><!--end .input-group -->
+								</div><!--end .form-group -->
+							</form>
+						</div><!--end .col -->
+					</div><!--end .row -->
+				</div><!--end .card-body -->
+			</div><!--end .card -->
+		</section>
+	<!-- END LOCKED SECTION -->
 
 </template>
