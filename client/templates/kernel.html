@@ -1,36 +1,61 @@
 <!-- APPLICATION KERNEL TEMPLATE -->
 <template name="kernel">
 	
-	<!-- BEGIN LOCKED SECTION -->
-		<section class="section-account">
-			<!-- INTERESTING IMAGE BACKDROP -->
-			<!-- <div class="img-backdrop" style="background-image: url('assets/img/img16.jpg')"></div> -->
-			<div class="spacer"></div>
-			<div class="card contain-xs style-transparent">
-				<div class="card-body">
-					<div class="row">
-						<div class="col-sm-12">
-							<!-- <img class="img-circle" src="assets/img/avatar1.jpg?1403934956" alt="" /> -->
-							<h2>Lumaka</h2>
-							<form class="form" action="#" accept-charset="utf-8" method="post">
-								<div class="form-group floating-label">
-									<div class="input-group">
-										<div class="input-group-content">
-											<input type="password" id="password" class="form-control" name="password">
-											<label for="password">Password</label>
-											<p class="help-block"><a href="#">Not Lumaka?</a></p>
+	<!-- BEGIN CONTENT-->
+	<div id="content">
+		<section>
+
+			<div class="section-body contain-lg">	
+				<!-- BEGIN BASIC VALIDATION -->
+				<div class="row">
+					<div class="col-lg-12">
+						<h1 class="text-primary">ncIDP</h1>
+					</div><!--end .col -->
+					<div class="col-lg-3 col-md-4">
+						<article class="margin-bottom-xxl">
+							<p class="lead">
+								Chemical shift prediction from the very first principles.
+							</p>
+							<p>
+								Validation can be added directly into your HTML.
+								This way you don't have to dive into your javascript everytime you need to add some rules.
+								Clientside validation can be activated when you add <code>.form-validate</code> to your form.
+							</p>
+						</article>
+					</div><!--end .col -->
+					<div class="col-lg-offset-1 col-md-8">
+						<form class="form form-validate floating-label" novalidate="novalidate">
+							<div class="card">
+								<div class="card-body">
+									<!-- PROTEIN SEQUENCE -->
+									<div class="form-group">
+										<textarea name="textarea1" id="textarea1" class="form-control" rows="6" required></textarea>
+										<label for="textarea1">Protein Sequence</label>
+									</div>
+									<div class="form-group">
+										<div class="checkbox checkbox-styled">
+											<label>
+												<input type="checkbox" name="terms1" required>
+												<span>I have read and accepted the terms</span>
+											</label>
 										</div>
-										<div class="input-group-btn">
-											<button class="btn btn-floating-action btn-primary" type="submit"><i class="fa fa-unlock"></i></button>
-										</div>
-									</div><!--end .input-group -->
-								</div><!--end .form-group -->
-							</form>
-						</div><!--end .col -->
-					</div><!--end .row -->
-				</div><!--end .card-body -->
-			</div><!--end .card -->
+									</div>
+								</div><!--end .card-body -->
+								<div class="card-actionbar">
+									<div class="card-actionbar-row">
+										<button type="submit" class="btn btn-flat btn-primary ink-reaction">Calculate</button>
+									</div>
+								</div><!--end .card-actionbar -->
+							</div><!--end .card -->
+							<em class="text-caption">*Kamil Tamiola</em>
+						</form>
+					</div><!--end .col -->
+				</div><!--end .row -->
+				<!-- END BASIC VALIDATION -->
+
+			</div>
+
 		</section>
-	<!-- END LOCKED SECTION -->
+	</div>
 
 </template>
