@@ -1,6 +1,27 @@
 // Invoked when template gets rendered
 Template.core.rendered = function () {
 
+	// Ink reaction
+	// $('.ink-reaction').on('click', function(e) {
+	// 	var bound = $(this).get(0).getBoundingClientRect();
+	// 	var x = e.clientX - bound.left;
+	// 	var y = e.clientY - bound.top;
+	// 	var color = o.getBackground($(this));
+	// 	var inverse = (o.getLuma(color) > 183) ? ' inverse' : '';
+	// 	var ink = $('<div class="ink' + inverse + '"></div>');
+	// 	var btnOffset = $(this).offset();
+	// 	var xPos = e.pageX - btnOffset.left;
+	// 	var yPos = e.pageY - btnOffset.top;
+	// 	ink.css({
+	// 		top: yPos,
+	// 		left: xPos
+	// 	}).appendTo($(this));
+	// 	window.setTimeout(function() {
+	// 		ink.remove();
+	// 	}, 1500);
+	// });
+
+
 	// Enable database selection
 	// via convinient tabs system
 	$('[data-toggle="tabs"] a').click(function(e) {
@@ -31,7 +52,6 @@ Template.core.rendered = function () {
 	});
 
 
-
 	// Initialize the help system
 	// The left help card
 	$('[data-toggle="help"]').click(function(e) {
@@ -40,7 +60,5 @@ Template.core.rendered = function () {
 		// display the off canvas help
 		console.log("Help...");
 	});
-
-
 
 }
