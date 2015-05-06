@@ -241,7 +241,7 @@ Template.core.rendered = function () {
     p.toggleBodyScrolling = function() {
         clearTimeout(this._timer);
         if ($('.offcanvas-pane.active').length > 0 && this._useBackdrop) {
-            var scrollbarWidth = this.measureScrollbar();
+            var scrollbarWidth = 100; // this.measureScrollbar();
             var bodyPad = parseInt(($('body').css('padding-right') || 0), 10);
             if (scrollbarWidth !== bodyPad) {
                 $('body').css('padding-right', bodyPad + scrollbarWidth);
@@ -294,5 +294,7 @@ Template.core.rendered = function () {
         $('body')[0].removeChild(scrollDiv);
         return scrollbarWidth;
     };
+
+    window.help = new AppOffcanvas;
 
 }
