@@ -328,12 +328,6 @@ Template.core.rendered = function () {
 	// INPUT DATA VALIDATION
 	// =========================================================================
 
-
-	// =========================================================================
-	// VALIDATION
-	// =========================================================================
-
-
 	$.validator.setDefaults({
 		highlight: function (element) {
 			$(element).closest('.form-group').addClass('has-error');
