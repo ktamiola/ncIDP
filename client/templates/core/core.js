@@ -2,6 +2,33 @@
 Template.core.rendered = function () {
 
 	// =========================================================================
+	// FLOATING LABELS
+	// =========================================================================
+
+	$('.floating-label .form-control').on('keyup change', function (e) {
+		var input = $(e.currentTarget);
+
+		if ($.trim(input.val()) !== '') {
+			input.addClass('dirty').removeClass('static');
+		} else {
+			input.removeClass('dirty').removeClass('static');
+		}
+	});
+
+	$('.floating-label .form-control').each(function () {
+		var input = $(this);
+
+		if ($.trim(input.val()) !== '') {
+			input.addClass('static').addClass('dirty');
+		}
+	});
+
+	$('.form-horizontal .form-control').each(function () {
+		$(this).after('<div class="form-control-line"></div>');
+	});
+
+
+	// =========================================================================
 	// INK REACTION EFFECT
 	// =========================================================================
 	
@@ -295,6 +322,6 @@ Template.core.rendered = function () {
         return scrollbarWidth;
     };
 
-    window.help = new AppOffcanvas;
+    window.offCanvas = new AppOffcanvas;
 
 }
