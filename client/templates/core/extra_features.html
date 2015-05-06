@@ -1,0 +1,103 @@
+<template name="extra_features">
+
+	<div class="panel-group" id="accordion7">
+		<div class="card panel" style="border-radius: 0px 0px 0px 0px; box-shadow: none;">
+
+			<div class="card-head style-primary card-head-sm collapsed ink-reaction" data-toggle="collapse" data-parent="#accordion7" data-target="#accordion7-1">
+				<header>Extra Processing Options</header>
+				<div class="tools">
+					<a class="btn btn-icon-toggle ink-reaction"><i class="fa fa-plus"></i></a>
+				</div>
+			</div>
+			<div id="accordion7-1" class="collapse">
+				<div class="card-body">
+
+					<p>Apply chemical shift offset corrections <a class="btn btn-icon-toggle btn-close ink-reaction" href="#offset_help" data-toggle="offcanvas"><i class="md md-help"></i></a></p>												
+
+					<!-- CHEMICAL SHIFT OFFSET SPINNERS -->
+
+					<form class="form">
+
+						<!-- START OF ROW -->
+						<div class="row">
+
+							<div class="col-md-6">
+
+								<div class="form-group">
+									<input type="text" class="form-control" id="HA_spinner" value="0.00"/>
+									<label>1HA</label>
+								</div>
+
+							</div>
+
+							<div class="col-md-6">
+
+								<div class="form-group">
+									<input type="text" class="form-control" id="HN_spinner" value="0.00"/>
+									<label>1HN</label>
+								</div>
+
+							</div>
+
+						</div>
+						<!-- END OF ROW -->
+
+						<!-- START OF ROW -->
+						<div class="row">
+
+							<div class="col-md-6">
+
+								<div class="form-group">
+									<input type="text" class="form-control" id="13C_spinner" value="0.00"/>
+									<label>13C</label>
+								</div>
+
+							</div>
+
+							<div class="col-md-6">
+
+								<div class="form-group">
+									<input type="text" class="form-control" id="13CA_spinner" value="0.00"/>
+									<label>13CA</label>
+								</div>
+
+							</div>
+
+						</div>
+						<!-- END OF ROW -->
+
+						<!-- START OF ROW -->
+						<div class="row">
+
+							<div class="col-md-6">
+
+								<div class="form-group">
+									<input type="text" class="form-control" id="13CB_spinner" value="0.00"/>
+									<label>13CB</label>
+								</div>
+
+							</div>
+
+							<div class="col-md-6">
+
+								<div class="form-group">
+									<input type="text" class="form-control" id="15N_spinner" value="0.00"/>
+									<label>15N</label>
+								</div>
+
+							</div>
+
+						</div>
+						<!-- END OF ROW -->
+
+					</form>
+
+					<!-- THE END OF THE SPINNER SECTION -->
+
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+</template>
