@@ -12,6 +12,26 @@ Template.core.rendered = function () {
 		Session.set('database', 'TamiolaDB');
 	});
 
+	// Accordion functions
+	$('.panel-group .card .in').each(function() {
+		var card = $(this).parent();
+		card.addClass('expanded');
+	});
+	$('.panel-group').on('hide.bs.collapse', function(e) {
+		var content = $(e.target);
+		var card = content.parent();
+		card.removeClass('expanded');
+	});
+	$('.panel-group').on('show.bs.collapse', function(e) {
+		var content = $(e.target);
+		var card = content.parent();
+		var group = card.closest('.panel-group');
+		group.find('.card.expanded').removeClass('expanded');
+		card.addClass('expanded');
+	});
+
+
+
 	// Initialize the help system
 	// The left help card
 	$('[data-toggle="help"]').click(function(e) {
@@ -20,5 +40,7 @@ Template.core.rendered = function () {
 		// display the off canvas help
 		console.log("Help...");
 	});
+
+
 
 }
