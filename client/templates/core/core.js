@@ -42,11 +42,13 @@ Template.core.rendered = function () {
 		var card = $(this).parent();
 		card.addClass('expanded');
 	});
+
 	$('.panel-group').on('hide.bs.collapse', function(e) {
 		var content = $(e.target);
 		var card = content.parent();
 		card.removeClass('expanded');
 	});
+
 	$('.panel-group').on('show.bs.collapse', function(e) {
 		var content = $(e.target);
 		var card = content.parent();
@@ -70,13 +72,21 @@ Template.core.rendered = function () {
 	// HELP SYSTEM
 	// =========================================================================
 
-	// Initialize the help system
-	// The left help card
+	// Assign button functionalities
+	// Help button for the chemical shift databases
 	$('[data-toggle="help"]').click(function(e) {
 		// prevent the default behavior -> setting the link URL with hashtag
 		e.preventDefault();
 		// display the off canvas help
 		console.log("Help...");
+	});
+
+	// Help button for the extra offset correction options
+	$('[data-toggle="help2"]').click(function(e) {
+		// prevent the default behavior -> setting the link URL with hashtag
+		e.preventDefault();
+		// display the off canvas help
+		console.log("Help2...");
 	});
 
 }
