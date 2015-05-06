@@ -2,7 +2,7 @@
 Template.core.rendered = function () {
 
 	// =========================================================================
-	// FLOATING LABELS
+	// FLOATING LABELS IN THE TEXT AREA
 	// =========================================================================
 
 	$('.floating-label .form-control').on('keyup change', function (e) {
