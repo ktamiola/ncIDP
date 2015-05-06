@@ -1,18 +1,20 @@
 <!-- APPLICATION KERNEL TEMPLATE -->
 <template name="core">
-	
+
 	<!-- BEGIN CONTENT-->
 	<div id="content">
+
 		<section>
 
-			<div class="section-body contain-lg">	
+			<div class="section-body contain-lg">
+
 				<!-- BEGIN BASIC VALIDATION -->
 				<div class="row">
-					
+
 					<div class="col-lg-12">
 						<h1 class="text-primary">ncIDP</h1>
 					</div><!--end .col -->
-					
+
 					<div class="col-lg-3 col-md-4">
 						<article class="margin-bottom-xxl">
 							<p class="lead">
@@ -25,7 +27,7 @@
 							</p>
 						</article>
 					</div><!--end .col -->
-					
+
 					<div class="col-lg-offset-1 col-md-8">
 						<form class="form form-validate floating-label" novalidate="novalidate">
 							<div class="card">
@@ -35,7 +37,7 @@
 
 									<header>CHEMICAL SHIFT DATABASE</header>
 									<div class="tools">
-										<a class="btn btn-icon-toggle btn-close ink-reaction" data-toggle="offcanvas" href="#offcanvas-demo-left"><i class="md md-help"></i></a>
+										<a class="btn btn-icon-toggle btn-close ink-reaction" data-toggle="offcanvas" href="#help"><i class="md md-help"></i></a>
 									</div>
 
 								</div>
@@ -52,7 +54,7 @@
 								<!-- END OF HEADERS -->
 
 								<div class="card-body tab-content">
-									
+
 									<div class="tab-pane active" id="TamiolaDB">
 										<!-- PROTEIN SEQUENCE -->
 										<div class="form-group">
@@ -102,7 +104,7 @@
 											</div>
 											<div id="accordion7-1" class="collapse">
 												<div class="card-body">
-													
+
 													<p>Apply chemical shift offset corrections <a class="btn btn-icon-toggle btn-close ink-reaction" data-toggle="help2"><i class="md md-help"></i></a></p>												
 
 													<!-- CHEMICAL SHIFT OFFSET SPINNERS -->
@@ -207,40 +209,46 @@
 				<!-- END BASIC VALIDATION -->
 
 
-			<!-- BEGIN OFFCANVAS LEFT -->
-			<div class="offcanvas">
+				<!-- BEGIN BASE-->
+				<div id="base">
 
-				<!-- BEGIN OFFCANVAS DEMO LEFT -->
-				<div id="offcanvas-demo-left" class="offcanvas-pane width-6">
-					<div class="offcanvas-head">
-						<header>Left off-canvas</header>
-						<div class="offcanvas-tools">
-							<a class="btn btn-icon-toggle btn-default-light pull-right" data-dismiss="offcanvas">
-								<i class="md md-close"></i>
-							</a>
+					<!-- BEGIN OFFCANVAS LEFT -->
+					<div class="offcanvas">
+
+						<!-- BEGIN OFFCANVAS DEMO LEFT -->
+						<div id="help" class="offcanvas-pane width-6">
+							<div class="offcanvas-head">
+								<header>Left off-canvas</header>
+								<div class="offcanvas-tools">
+									<a class="btn btn-icon-toggle btn-default-light pull-right" data-dismiss="offcanvas">
+										<i class="md md-close"></i>
+									</a>
+								</div>
+							</div>
+							<div class="offcanvas-body">
+								<p>
+									An off-canvas can hold any content you want.
+								</p>
+								<p>
+									Close this off-canvas by clicking on the backdrop or press the close button in the upper right corner.
+								</p>
+								<p>&nbsp;</p>
+								<h4>Some details</h4>
+								<ul class="list-divided">
+									<li><strong>Width</strong><br/><span class="opacity-75">240px</span></li>
+									<li><strong>Height</strong><br/><span class="opacity-75">100%</span></li>
+									<li><strong>Body scroll</strong><br/><span class="opacity-75">disabled</span></li>
+									<li><strong>Background color</strong><br/><span class="opacity-75">Default</span></li>
+								</ul>
+							</div>
 						</div>
-					</div>
-					<div class="offcanvas-body">
-						<p>
-							An off-canvas can hold any content you want.
-						</p>
-						<p>
-							Close this off-canvas by clicking on the backdrop or press the close button in the upper right corner.
-						</p>
-						<p>&nbsp;</p>
-						<h4>Some details</h4>
-						<ul class="list-divided">
-							<li><strong>Width</strong><br/><span class="opacity-75">240px</span></li>
-							<li><strong>Height</strong><br/><span class="opacity-75">100%</span></li>
-							<li><strong>Body scroll</strong><br/><span class="opacity-75">disabled</span></li>
-							<li><strong>Background color</strong><br/><span class="opacity-75">Default</span></li>
-						</ul>
-					</div>
-				</div>
-				<!-- END OFFCANVAS DEMO LEFT -->
+						<!-- END OFFCANVAS DEMO LEFT -->
 
-			</div><!--end .offcanvas-->
-			<!-- END OFFCANVAS LEFT -->
+					</div><!--end .offcanvas-->
+					<!-- END OFFCANVAS LEFT -->
+
+				</div>
+				<!-- END OF BASE -->
 
 			</div>
 
