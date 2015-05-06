@@ -350,6 +350,17 @@ Template.core.rendered = function () {
 		}
 	});
 
+	// Custom Validator Method with Regex
+	// It will be used for protein sequence 
+	$.validator.addMethod(
+        "regex",
+        function(value, element, regexp) {
+            var re = new RegExp(regexp);
+            return this.optional(element) || re.test(value);
+        },
+        "Please check your input. Regex did not pass!"
+	);
+
 	$('.form-validate').each(function () {
 		var validator = $(this).validate();
 		$(this).data('validator', validator);
