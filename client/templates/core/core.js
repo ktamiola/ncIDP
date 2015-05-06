@@ -59,7 +59,12 @@ Template.core.rendered = function () {
 	// CHEMICAL SHIFT OFFSET SPINNERS
 	// =========================================================================
 
-	$("#spinner-decimal").spinner({step: 0.01, numberFormat: "n", max: 5});
+	$("#HA_spinner").spinner({step: 0.01, numberFormat: "n", max: 2});
+	$("#HN_spinner").spinner({step: 0.01, numberFormat: "n", max: 2});
+	$("#13CA_spinner").spinner({step: 0.01, numberFormat: "n", max: 5});
+	$("#13CB_spinner").spinner({step: 0.01, numberFormat: "n", max: 5});
+	$("#13C_spinner").spinner({step: 0.01, numberFormat: "n", max: 5});
+	$("#15N_spinner").spinner({step: 0.01, numberFormat: "n", max: 10});
 
 	// =========================================================================
 	// HELP SYSTEM
