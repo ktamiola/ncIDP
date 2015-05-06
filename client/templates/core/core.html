@@ -35,7 +35,7 @@
 
 									<header>CHEMICAL SHIFT DATABASE</header>
 									<div class="tools">
-										<a class="btn btn-icon-toggle btn-close" data-toggle="help"><i class="md md-help"></i></a>
+										<a class="btn btn-icon-toggle btn-close ink-reaction" data-toggle="help"><i class="md md-help"></i></a>
 									</div>
 
 								</div>
@@ -94,15 +94,49 @@
 									<div class="panel-group" id="accordion7">
 										<div class="card panel" style="border-radius: 0px 0px 0px 0px; box-shadow: none;">
 
-											<div class="card-head collapsed" data-toggle="collapse" data-parent="#accordion7" data-target="#accordion7-1">
-												<header>Extra Options</header>
+											<div class="card-head card-head-sm collapsed" data-toggle="collapse" data-parent="#accordion7" data-target="#accordion7-1">
+												<header>Select Extra Options</header>
 												<div class="tools">
 													<a class="btn btn-icon-toggle"><i class="fa fa-plus"></i></a>
 												</div>
 											</div>
 											<div id="accordion7-1" class="collapse">
 												<div class="card-body">
-													<p>Offset corrections</p>
+													
+													<p>Apply chemical shift offset corrections <a class="btn btn-icon-toggle btn-close ink-reaction" data-toggle="help"><i class="md md-help"></i></a></p>												
+
+													<!-- CHEMICAL SHIFT OFFSET SPINNERS -->
+
+													<form class="form">
+														<div class="form-group">
+															<input type="text" class="form-control" id="spinner-decimal" value="0.00"/>
+															<label>1HA</label>
+															<!-- <p class="help-block">Must be over 16</p> -->
+														</div>
+														<div class="form-group">
+															<input type="text" class="form-control" id="spinner-decimal" value="0.00"/>
+															<label>1HN</label>
+														</div>
+														<div class="form-group">
+															<input type="text" class="form-control" id="spinner-decimal" value="0.00"/>
+															<label>13C</label>
+														</div>
+														<div class="form-group">
+															<input type="text" class="form-control" id="spinner-decimal" value="0.00"/>
+															<label>13CA</label>
+														</div>
+														<div class="form-group">
+															<input type="text" class="form-control" id="spinner-decimal" value="0.00"/>
+															<label>13CB</label>
+														</div>
+														<div class="form-group">
+															<input type="text" class="form-control" id="spinner-decimal" value="0.00"/>
+															<label>15N</label>
+														</div>
+													</form>
+
+													<!-- THE END OF THE SPINNER SECTION -->
+
 												</div>
 											</div>
 
