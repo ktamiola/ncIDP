@@ -22,8 +22,10 @@ Template.core.rendered = function () {
 	// });
 
 
-	// Enable database selection
-	// via convinient tabs system
+	// =========================================================================
+	// CHEMICAL SHIFT DATABASE SELECTION VIA TABS
+	// =========================================================================
+
 	$('[data-toggle="tabs"] a').click(function(e) {
 		// prevent the default behavior -> setting the link URL with hashtag
 		e.preventDefault();
@@ -33,7 +35,10 @@ Template.core.rendered = function () {
 		Session.set('database', 'TamiolaDB');
 	});
 
-	// Accordion functions
+	// =========================================================================
+	// EXTRA FEATURES ACCORDION SLIDING PANEL
+	// =========================================================================
+
 	$('.panel-group .card .in').each(function() {
 		var card = $(this).parent();
 		card.addClass('expanded');
@@ -51,6 +56,15 @@ Template.core.rendered = function () {
 		card.addClass('expanded');
 	});
 
+	// =========================================================================
+	// CHEMICAL SHIFT OFFSET SPINNERS
+	// =========================================================================
+
+	$("#spinner-decimal").spinner({step: 0.01, numberFormat: "n", max: 1});
+
+	// =========================================================================
+	// HELP SYSTEM
+	// =========================================================================
 
 	// Initialize the help system
 	// The left help card
