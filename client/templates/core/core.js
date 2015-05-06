@@ -21,7 +21,6 @@ Template.core.rendered = function () {
 	// 	}, 1500);
 	// });
 
-
 	// =========================================================================
 	// CHEMICAL SHIFT DATABASE SELECTION VIA TABS
 	// =========================================================================
@@ -60,7 +59,7 @@ Template.core.rendered = function () {
 	// CHEMICAL SHIFT OFFSET SPINNERS
 	// =========================================================================
 
-	$("#spinner-decimal").spinner({step: 0.01, numberFormat: "n", max: 1});
+	$("#spinner-decimal").spinner({step: 0.01, numberFormat: "n", max: 5});
 
 	// =========================================================================
 	// HELP SYSTEM
