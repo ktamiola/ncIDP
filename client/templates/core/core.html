@@ -16,7 +16,7 @@
 					<div class="col-lg-3 col-md-4">
 						<article class="margin-bottom-xxl">
 							<p class="lead">
-								Chemical shift prediction from the very first principles.
+								Chemical shift predictions for intrinsically disordered polypeptides
 							</p>
 							<p>
 								Validation can be added directly into your HTML.
@@ -35,7 +35,7 @@
 
 									<header>CHEMICAL SHIFT DATABASE</header>
 									<div class="tools">
-										<a class="btn btn-icon-toggle btn-close" data-toggle="help"><i class="md md-help"></i></a>
+										<a class="btn btn-icon-toggle btn-close ink-reaction" data-toggle="help"><i class="md md-help"></i></a>
 									</div>
 
 								</div>
@@ -56,7 +56,16 @@
 									<div class="tab-pane active" id="TamiolaDB">
 										<!-- PROTEIN SEQUENCE -->
 										<div class="form-group">
-											<textarea name="sequence" id="sequence" class="form-control" rows="6" required></textarea>
+											<textarea style="text-transform: uppercase;" name="sequence" id="sequence" class="form-control" rows="6" required></textarea>
+											<label for="sequence">Protein Sequence</label>
+										</div>
+										<!-- END OF PROTEIN SEQUENCE -->
+									</div>
+
+									<div class="tab-pane" id="WangDB">
+										<!-- PROTEIN SEQUENCE -->
+										<div class="form-group">
+											<textarea style="text-transform: uppercase;" name="sequence" id="sequence" class="form-control" rows="6" required></textarea>
 											<label for="sequence">Protein Sequence</label>
 										</div>
 										<!-- END OF PROTEIN SEQUENCE -->
@@ -65,16 +74,7 @@
 									<div class="tab-pane" id="SchwarzingerDB">
 										<!-- PROTEIN SEQUENCE -->
 										<div class="form-group">
-											<textarea name="sequence" id="sequence" class="form-control" rows="6" required></textarea>
-											<label for="sequence">Protein Sequence</label>
-										</div>
-										<!-- END OF PROTEIN SEQUENCE -->
-									</div>
-
-									<div class="tab-pane" id="SchwarzingerDB">
-										<!-- PROTEIN SEQUENCE -->
-										<div class="form-group">
-											<textarea name="sequence" id="sequence" class="form-control" rows="6" required></textarea>
+											<textarea style="text-transform: uppercase;" name="sequence" id="sequence" class="form-control" rows="6" required></textarea>
 											<label for="sequence">Protein Sequence</label>
 										</div>
 										<!-- END OF PROTEIN SEQUENCE -->
@@ -83,20 +83,115 @@
 									<div class="tab-pane" id="WuhtrichDB">
 										<!-- PROTEIN SEQUENCE -->
 										<div class="form-group">
-											<textarea name="sequence" id="sequence" class="form-control" rows="6" required></textarea>
+											<textarea style="text-transform: uppercase;" name="sequence" id="sequence" class="form-control" rows="6" required></textarea>
 											<label for="sequence">Protein Sequence</label>
 										</div>
 										<!-- END OF PROTEIN SEQUENCE -->
 									</div>
 
-									<div class="form-group">
-										<div class="checkbox checkbox-styled">
-											<label>
-												<input type="checkbox" name="terms1" required>
-												<span>I have read and accepted the terms</span>
-											</label>
+									<!-- EXTRA FEATURES WILL COME HERE -->
+
+									<div class="panel-group" id="accordion7">
+										<div class="card panel" style="border-radius: 0px 0px 0px 0px; box-shadow: none;">
+
+											<div class="card-head style-primary card-head-sm collapsed" data-toggle="collapse" data-parent="#accordion7" data-target="#accordion7-1">
+												<header>Extra Processing Options</header>
+												<div class="tools">
+													<a class="btn btn-icon-toggle"><i class="fa fa-plus"></i></a>
+												</div>
+											</div>
+											<div id="accordion7-1" class="collapse">
+												<div class="card-body">
+													
+													<p>Apply chemical shift offset corrections <a class="btn btn-icon-toggle btn-close ink-reaction" data-toggle="help"><i class="md md-help"></i></a></p>												
+
+													<!-- CHEMICAL SHIFT OFFSET SPINNERS -->
+
+													<form class="form">
+
+														<!-- START OF ROW -->
+														<div class="row">
+
+															<div class="col-md-6">
+
+																<div class="form-group">
+																	<input type="text" class="form-control" id="HA_spinner" value="0.00"/>
+																	<label>1HA</label>
+																</div>
+
+															</div>
+
+															<div class="col-md-6">
+
+																<div class="form-group">
+																	<input type="text" class="form-control" id="HN_spinner" value="0.00"/>
+																	<label>1HN</label>
+																</div>
+
+															</div>
+
+														</div>
+														<!-- END OF ROW -->
+
+														<!-- START OF ROW -->
+														<div class="row">
+
+															<div class="col-md-6">
+
+																<div class="form-group">
+																	<input type="text" class="form-control" id="13C_spinner" value="0.00"/>
+																	<label>13C</label>
+																</div>
+
+															</div>
+
+															<div class="col-md-6">
+
+																<div class="form-group">
+																	<input type="text" class="form-control" id="13CA_spinner" value="0.00"/>
+																	<label>13CA</label>
+																</div>
+
+															</div>
+
+														</div>
+														<!-- END OF ROW -->
+
+														<!-- START OF ROW -->
+														<div class="row">
+
+															<div class="col-md-6">
+
+																<div class="form-group">
+																	<input type="text" class="form-control" id="13CB_spinner" value="0.00"/>
+																	<label>13CB</label>
+																</div>
+
+															</div>
+
+															<div class="col-md-6">
+
+																<div class="form-group">
+																	<input type="text" class="form-control" id="15N_spinner" value="0.00"/>
+																	<label>15N</label>
+																</div>
+
+															</div>
+
+														</div>
+														<!-- END OF ROW -->
+
+													</form>
+
+													<!-- THE END OF THE SPINNER SECTION -->
+
+												</div>
+											</div>
+
 										</div>
 									</div>
+
+									<!-- THE END OF EXTRA FEATURES -->
 
 								</div><!--end .card-body -->
 
@@ -106,7 +201,6 @@
 									</div>
 								</div><!--end .card-actionbar -->
 							</div><!--end .card -->
-							<em class="text-caption">*Kamil Tamiola</em>
 						</form>
 					</div><!--end .col -->
 				</div><!--end .row -->
