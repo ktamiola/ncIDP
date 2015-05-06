@@ -324,4 +324,42 @@ Template.core.rendered = function () {
 
     window.offCanvas = new AppOffcanvas;
 
+    // =========================================================================
+	// INPUT DATA VALIDATION
+	// =========================================================================
+
+
+	// =========================================================================
+	// VALIDATION
+	// =========================================================================
+
+
+	$.validator.setDefaults({
+		highlight: function (element) {
+			$(element).closest('.form-group').addClass('has-error');
+		},
+		unhighlight: function (element) {
+			$(element).closest('.form-group').removeClass('has-error');
+		},
+		errorElement: 'span',
+		errorClass: 'help-block',
+		errorPlacement: function (error, element) {
+			if (element.parent('.input-group').length) {
+				error.insertAfter(element.parent());
+			}
+			else if (element.parent('label').length) {
+				error.insertAfter(element.parent());
+			}
+			else {
+				error.insertAfter(element);
+			}
+		}
+	});
+
+	$('.form-validate').each(function () {
+		var validator = $(this).validate();
+		$(this).data('validator', validator);
+	});
+
+
 }
