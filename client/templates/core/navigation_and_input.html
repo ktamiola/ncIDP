@@ -1,0 +1,67 @@
+<template name="navigation_and_input">
+
+	<!-- CARD HEADERS -->
+	<div class="card-head card-head-s style-primary">
+
+		<header>CHEMICAL SHIFT DATABASE</header>
+		<div class="tools">
+			<a class="btn btn-icon-toggle btn-close ink-reaction" data-toggle="offcanvas" href="#database_help"><i class="md md-help"></i></a>
+		</div>
+
+	</div>
+
+	<div class="card-head">
+
+		<ul class="nav nav-tabs nav-justified" data-toggle="tabs">
+			<li class="active"><a href="#TamiolaDB">Tamiola</a></li>
+			<li><a href="#WangDB">Wang</a></li>
+			<li><a href="#SchwarzingerDB">Schwarzinger</a></li>
+			<li><a href="#WuhtrichDB">W&Uuml;htrich</a></li>
+		</ul>
+	</div>
+	<!-- END OF HEADERS -->
+
+	<div class="card-body tab-content">
+
+		<div class="tab-pane active" id="TamiolaDB">
+			<!-- PROTEIN SEQUENCE -->
+			<div class="form-group">
+				<textarea style="text-transform: uppercase;" name="sequence" id="sequence" class="form-control" rows="6" required></textarea>
+				<label for="sequence">Protein Sequence</label>
+			</div>
+			<!-- END OF PROTEIN SEQUENCE -->
+		</div>
+
+		<div class="tab-pane" id="WangDB">
+			<!-- PROTEIN SEQUENCE -->
+			<div class="form-group">
+				<textarea style="text-transform: uppercase;" name="sequence" id="sequence" class="form-control" rows="6" required></textarea>
+				<label for="sequence">Protein Sequence</label>
+			</div>
+			<!-- END OF PROTEIN SEQUENCE -->
+		</div>
+
+		<div class="tab-pane" id="SchwarzingerDB">
+			<!-- PROTEIN SEQUENCE -->
+			<div class="form-group">
+				<textarea style="text-transform: uppercase;" name="sequence" id="sequence" class="form-control" rows="6" required></textarea>
+				<label for="sequence">Protein Sequence</label>
+			</div>
+			<!-- END OF PROTEIN SEQUENCE -->
+		</div>
+
+		<div class="tab-pane" id="WuhtrichDB">
+			<!-- PROTEIN SEQUENCE -->
+			<div class="form-group">
+				<textarea style="text-transform: uppercase;" name="sequence" id="sequence" class="form-control" rows="6" required></textarea>
+				<label for="sequence">Protein Sequence</label>
+			</div>
+			<!-- END OF PROTEIN SEQUENCE -->
+		</div>
+
+		<!-- EXTRA FEATURES TEMPLATE -->
+		{{> extra_features}}
+
+	</div><!--end .card-body -->
+	
+</template>

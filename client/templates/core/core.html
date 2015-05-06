@@ -11,97 +11,23 @@
 				<!-- BEGIN BASIC VALIDATION -->
 				<div class="row">
 
-					<div class="col-lg-12">
-						<h1 class="text-primary">ncIDP</h1>
-					</div><!--end .col -->
-
-					<div class="col-lg-3 col-md-4">
-						<article class="margin-bottom-xxl">
-							<p class="lead">
-								Chemical shift predictions for intrinsically disordered polypeptides
-							</p>
-							<p>
-								Validation can be added directly into your HTML.
-								This way you don't have to dive into your javascript everytime you need to add some rules.
-								Clientside validation can be activated when you add <code>.form-validate</code> to your form.
-							</p>
-						</article>
-					</div><!--end .col -->
+					{{> tool_header}}
 
 					<div class="col-lg-offset-1 col-md-8">
 						<form class="form form-validate floating-label" novalidate="novalidate">
+							
 							<div class="card">
 
-								<!-- CARD HEADERS -->
-								<div class="card-head card-head-s style-primary">
-
-									<header>CHEMICAL SHIFT DATABASE</header>
-									<div class="tools">
-										<a class="btn btn-icon-toggle btn-close ink-reaction" data-toggle="offcanvas" href="#database_help"><i class="md md-help"></i></a>
-									</div>
-
-								</div>
-
-								<div class="card-head">
-
-									<ul class="nav nav-tabs nav-justified" data-toggle="tabs">
-										<li class="active"><a href="#TamiolaDB">Tamiola</a></li>
-										<li><a href="#WangDB">Wang</a></li>
-										<li><a href="#SchwarzingerDB">Schwarzinger</a></li>
-										<li><a href="#WuhtrichDB">W&Uuml;htrich</a></li>
-									</ul>
-								</div>
-								<!-- END OF HEADERS -->
-
-								<div class="card-body tab-content">
-
-									<div class="tab-pane active" id="TamiolaDB">
-										<!-- PROTEIN SEQUENCE -->
-										<div class="form-group">
-											<textarea style="text-transform: uppercase;" name="sequence" id="sequence" class="form-control" rows="6" required></textarea>
-											<label for="sequence">Protein Sequence</label>
-										</div>
-										<!-- END OF PROTEIN SEQUENCE -->
-									</div>
-
-									<div class="tab-pane" id="WangDB">
-										<!-- PROTEIN SEQUENCE -->
-										<div class="form-group">
-											<textarea style="text-transform: uppercase;" name="sequence" id="sequence" class="form-control" rows="6" required></textarea>
-											<label for="sequence">Protein Sequence</label>
-										</div>
-										<!-- END OF PROTEIN SEQUENCE -->
-									</div>
-
-									<div class="tab-pane" id="SchwarzingerDB">
-										<!-- PROTEIN SEQUENCE -->
-										<div class="form-group">
-											<textarea style="text-transform: uppercase;" name="sequence" id="sequence" class="form-control" rows="6" required></textarea>
-											<label for="sequence">Protein Sequence</label>
-										</div>
-										<!-- END OF PROTEIN SEQUENCE -->
-									</div>
-
-									<div class="tab-pane" id="WuhtrichDB">
-										<!-- PROTEIN SEQUENCE -->
-										<div class="form-group">
-											<textarea style="text-transform: uppercase;" name="sequence" id="sequence" class="form-control" rows="6" required></textarea>
-											<label for="sequence">Protein Sequence</label>
-										</div>
-										<!-- END OF PROTEIN SEQUENCE -->
-									</div>
-
-									<!-- EXTRA FEATURES TEMPLATE -->
-									{{> extra_features}}
-
-								</div><!--end .card-body -->
+								{{> navigation_and_input}}
 
 								<div class="card-actionbar">
 									<div class="card-actionbar-row">
 										<button type="submit" class="btn btn-flat btn-primary ink-reaction">Calculate</button>
 									</div>
 								</div><!--end .card-actionbar -->
+							
 							</div><!--end .card -->
+
 						</form>
 					</div><!--end .col -->
 				</div><!--end .row -->
