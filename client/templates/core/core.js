@@ -350,15 +350,29 @@ Template.core.rendered = function () {
 		}
 	});
 
-	// Custom Validator Method with Regex
-	// It will be used for protein sequence 
+	// Custom Validator Method
+	// I will use a very simple check 
 	$.validator.addMethod(
-        "regex",
+        "regex", // the name of the method
         function(value, element, regexp) {
-            var re = new RegExp(regexp);
-            return this.optional(element) || re.test(value);
+        	var AAs = 'acdefghiklmnpqrstwyvACDEFGHIKLMNPQRSTWYV';
+
+        	// Max score of the input field should be
+        	var maxScore = value.length;
+        	var tmpScore = 0; // the current score in the test
+
+        	// Analyze the content of the field and return the score
+        	for (var j=0; j<AAs.length; j++) {
+        		for (var i=0; i<maxScore; i++) {
+        			if (value[i]==AAs[j]) {
+        				tmpScore = tmpScore + 1;
+        			}
+        		}
+        	}
+
+            return this.optional(element) || tmpScore == maxScore;
         },
-        "Please check your input. Regex did not pass!"
+        "Only protein amino acids please. Check for white spaces and special characters."
 	);
 
 	$('.form-validate').each(function () {
