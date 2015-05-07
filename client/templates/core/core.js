@@ -401,6 +401,7 @@ Template.core.events({
 		event.preventDefault();
 		
 		// set the default database
+        // in that particular case the Tamiola 2010 database
 		Session.set('database', 'TamiolaDB');
 		
 		// display the tab of interest
