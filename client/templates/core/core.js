@@ -324,4 +324,61 @@ Template.core.rendered = function () {
 
     window.offCanvas = new AppOffcanvas;
 
+    // =========================================================================
+	// INPUT DATA VALIDATION
+	// =========================================================================
+
+	$.validator.setDefaults({
+		highlight: function (element) {
+			$(element).closest('.form-group').addClass('has-error');
+		},
+		unhighlight: function (element) {
+			$(element).closest('.form-group').removeClass('has-error');
+		},
+		errorElement: 'span',
+		errorClass: 'help-block',
+		errorPlacement: function (error, element) {
+			if (element.parent('.input-group').length) {
+				error.insertAfter(element.parent());
+			}
+			else if (element.parent('label').length) {
+				error.insertAfter(element.parent());
+			}
+			else {
+				error.insertAfter(element);
+			}
+		}
+	});
+
+	// Custom Validator Method
+	// I will use a very simple check 
+	$.validator.addMethod(
+        "regex", // the name of the method
+        function(value, element, regexp) {
+        	var AAs = 'acdefghiklmnpqrstwyvACDEFGHIKLMNPQRSTWYV';
+
+        	// Max score of the input field should be
+        	var maxScore = value.length;
+        	var tmpScore = 0; // the current score in the test
+
+        	// Analyze the content of the field and return the score
+        	for (var j=0; j<AAs.length; j++) {
+        		for (var i=0; i<maxScore; i++) {
+        			if (value[i]==AAs[j]) {
+        				tmpScore = tmpScore + 1;
+        			}
+        		}
+        	}
+
+            return this.optional(element) || tmpScore == maxScore;
+        },
+        "Only protein amino acids please. Check for white spaces and special characters."
+	);
+
+	$('.form-validate').each(function () {
+		var validator = $(this).validate();
+		$(this).data('validator', validator);
+	});
+
+
 }
