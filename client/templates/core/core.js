@@ -344,6 +344,9 @@ Template.core.rendered = function () {
 			else if (element.parent('label').length) {
 				error.insertAfter(element.parent());
 			}
+			else if (element.parent('.form-control').length) {
+				error.insertAfter(element.parent());
+			}
 			else {
 				error.insertAfter(element);
 			}
@@ -353,7 +356,7 @@ Template.core.rendered = function () {
 	// Custom Validator Method
 	// I will use a very simple check 
 	$.validator.addMethod(
-        "regex", // the name of the method
+        "sequence", // the name of the method
         function(value, element, regexp) {
         	var AAs = 'acdefghiklmnpqrstwyvACDEFGHIKLMNPQRSTWYV';
 
@@ -372,7 +375,7 @@ Template.core.rendered = function () {
 
             return this.optional(element) || tmpScore == maxScore;
         },
-        "Only protein amino acids please. Check for white spaces and special characters."
+        "Only protein amino acids please. (Check for white spaces and special characters)"
 	);
 
 	$('.form-validate').each(function () {
