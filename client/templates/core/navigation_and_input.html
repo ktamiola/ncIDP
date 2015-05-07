@@ -37,7 +37,7 @@
 
 		<!-- PROTEIN SEQUENCE -->
 			<div class="form-group floating-label">
-				<textarea style="text-transform: uppercase;" name="sequence" id="sequence" class="form-control" rows="6" required data-rule-minlength="3" data-msg-minlength="Your polypeptide should be at least 3 amino acids long." regexD="[^0-9]" data-msg-regexD="No numbers. Only protein amino acids allowed."></textarea>
+				<textarea style="text-transform: uppercase;" name="sequence" id="sequence" class="form-control" rows="6" required data-rule-minlength="3" data-msg-minlength="Your polypeptide should be at least 3 amino acids long." regex="\b[acdefghiklmnpqrstwyvACDEFGHIKLMNPQRSTWYV]+\b" data-msg-regex="Only protein amino acids please."></textarea>
 				<label for="sequence">Protein Sequence</label>
 			</div>
 			<!-- END OF PROTEIN SEQUENCE -->
