@@ -75,19 +75,6 @@ Template.core.rendered = function () {
     };
 
 	// =========================================================================
-	// CHEMICAL SHIFT DATABASE SELECTION VIA TABS
-	// =========================================================================
-
-	$('[data-toggle="tabs"] a').click(function(e) {
-		// prevent the default behavior -> setting the link URL with hashtag
-		e.preventDefault();
-		// display the tab of interest
-		$(this).tab('show');
-		// Retrieve the type of the database
-		Session.set('database', 'TamiolaDB');
-	});
-
-	// =========================================================================
 	// EXTRA FEATURES ACCORDION SLIDING PANEL
 	// =========================================================================
 
@@ -385,3 +372,52 @@ Template.core.rendered = function () {
 
 
 }
+
+// Event listener for the template
+Template.core.events({
+
+	// =========================================================================
+	// CHEMICAL SHIFT DATABASE SELECTION VIA TABS
+	// =========================================================================
+
+	'click [data-toggle="tabs"] a' : function (event) {
+
+		// prevent the default behavior -> setting the link URL with hashtag
+		event.preventDefault();
+		// display the tab of interest
+		$(event.target).tab('show');
+		// Retrieve the type of the database
+		Session.set('database', 'TamiolaDB');
+
+	},
+
+	// =========================================================================
+	// RESET FORMS
+	// =========================================================================
+
+	'click #resetButton' : function (event) {
+
+		// prevent the default behavior
+		event.preventDefault();
+		
+		// set the default database
+		Session.set('database', 'TamiolaDB');
+		
+		// display the tab of interest
+		$('#defaultDB').tab('show');
+
+		// Clean sequence text input
+		$('#sequence').val("");
+		
+		// Clean the offset values
+		$("#HA_spinner").val("0.00");
+		$("#HN_spinner").val("0.00");
+		$("#13CA_spinner").val("0.00");
+		$("#13CB_spinner").val("0.00");
+		$("#13C_spinner").val("0.00");
+		$("#15N_spinner").val("0.00");
+
+	},
+
+
+});
