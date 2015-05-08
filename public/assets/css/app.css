@@ -5,6 +5,24 @@ Created to override the default sytling settings of selected elements
 
 */
 
+#toolContainer {
+	min-height: 491px;
+}
+
+#buttonContainer {
+	min-height: 435px;
+}
+
+/*Declarations for massive action buttons*/
+
+#buttonCopy, #buttonDownload {
+	height: 50%;
+	margin-bottom: 0px;
+	box-shadow: none;
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+
 #accordion7 {
 	margin-bottom: 0px;
 }
