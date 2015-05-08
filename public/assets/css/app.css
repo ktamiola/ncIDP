@@ -11,35 +11,29 @@ Created to override the default sytling settings of selected elements
 
 #buttonContainer {
 	min-height: 435px;
-	display: table;
 	width: 100%;
-}
-
-#actionContainer {
-	display: table-cell;
-	vertical-align: middle;
-	width: 100%;
-	height: 100%;
-}
-
-#cell {
-	display: table;
-	width: 100%;
-	height: 110px;
-}
-
-#cellChild {
-	display: table-cell;
-	vertical-align: middle;
-	width: 100%;
-	height: 100%;
 }
 
 /*Declarations for the action buttons*/
 
-#buttonCopy, #buttonDownload {
+#cell {
+	width: 100%;
+}
+
+#buttonCopy {
 	min-width: 300px;
 	max-width: 300px;
+	position: absolute;
+	display: inline-block;
+	top: 25%;
+}
+
+#buttonDownload {
+	min-width: 300px;
+	max-width: 300px;
+	position: absolute;
+	display: inline-block;
+	top: 75%;
 }
 
 /*CORE SECTION*/
@@ -55,14 +49,4 @@ Created to override the default sytling settings of selected elements
 
 #actionBarButtons {
 	padding-top: 8px;	
-}
-
-/* SMALL VIEWPORT */
-
-@media (max-width: 768px) {
-	.vertical-center:before {
-		height: auto;
-		/* Or */
-		display: none;
-	}
 }
