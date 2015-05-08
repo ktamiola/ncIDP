@@ -16,7 +16,7 @@ Created to override the default sytling settings of selected elements
 	width: 100%;
 }
 
-#actions {
+#result_actions {
 	padding-right: 24px;
 }
 
@@ -33,4 +33,13 @@ Created to override the default sytling settings of selected elements
 
 #actionBarButtons {
 	padding-top: 8px;	
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px;) { 
+
+	#result_actions {
+	padding-right: 0px;
+	}
+
 }
