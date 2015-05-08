@@ -1,0 +1,64 @@
+<!-- APPLICATION KERNEL TEMPLATE -->
+<template name="results">
+
+	<!-- BEGIN CONTENT-->
+	<div id="content">
+
+		<section>
+
+			<!-- SECTION HEADER -->
+			<div class="section-header">
+			</div>
+			<!-- END OF HEADER -->
+
+			<div class="section-body contain-lg">
+
+				<!-- BEGIN BASIC VALIDATION -->
+				<div class="row">
+
+					{{> tool_header}}
+
+					<div class="col-lg-offset-1 col-md-8">
+						<form class="form form-validate floating-label" novalidate="novalidate">
+							
+							<div class="card">
+
+								{{> navigation_and_input}}
+
+								<div id="featureDivider" class="text-divider"></div>
+
+								<!-- ACTION BAR -->
+								<div id="actionBarButtons" class="card-actionbar">
+									<div class="card-actionbar-row">
+										<button id="resetButton" type="submit" class="btn btn-flat btn-default ink-reaction">Reset</button>
+										<button id="calculateButton" type="submit" class="btn btn-flat btn-primary ink-reaction">Calculate</button>
+									</div>
+								</div>
+								<!-- END OF ACTION BAR -->
+
+							</div>
+							<!-- END OF CARD -->
+
+						</form>
+					</div><!--end .col -->
+				</div><!--end .row -->
+				<!-- END BASIC VALIDATION -->
+
+				<!-- BEGIN BASE / THIS TAG IS IMPORTANT FOR THE HELP SYSTEM / DO NOT REMOVE-->
+				<div id="base">
+
+					<!-- HELP CANVAS FOR DATABASE SELECTION -->
+					{{> database_help}}
+
+					<!-- HELP CANVAS FOR CHEMICAL SHIFT OFFSET SETTINGS -->
+					{{> offset_help}}
+
+				</div>
+				<!-- END OF BASE -->
+
+			</div>
+
+		</section>
+	</div>
+
+</template>
