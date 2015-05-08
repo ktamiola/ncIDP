@@ -8,3 +8,12 @@ Created to override the default sytling settings of selected elements
 #accordion7 {
 	margin-bottom: 0px;
 }
+
+#featureDivider {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+#actionBarButtons {
+	padding-top: 8px;	
+}
