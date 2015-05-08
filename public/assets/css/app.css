@@ -10,37 +10,59 @@ Created to override the default sytling settings of selected elements
 }
 
 #buttonContainer {
-	min-height: 345px;
+	min-height: 435px;
+	display: table;
+	width: 100%;
 }
 
 #actionContainer {
-	margin-top: 50px;
-	margin-bottom: 50px;	
+	display: table-cell;
+	vertical-align: middle;
+	width: 100%;
+	height: 100%;
 }
 
- .col-md-12 {
- 	margin-top: 25px;
- 	margin-bottom: 25px;
- }
+#cell {
+	display: table;
+	width: 100%;
+	height: 110px;
+}
 
- /*Declarations for massive action buttons*/
+#cellChild {
+	display: table-cell;
+	vertical-align: middle;
+	width: 100%;
+	height: 100%;
+}
 
- #buttonCopy, #buttonDownload {
- 	min-width: 300px;
- 	max-width: 300px;
- }
+/*Declarations for the action buttons*/
 
- /*CORE SECTION*/
+#buttonCopy, #buttonDownload {
+	min-width: 300px;
+	max-width: 300px;
+}
 
- #accordion7 {
- 	margin-bottom: 0px;
- }
+/*CORE SECTION*/
 
- #featureDivider {
- 	margin-top: 0px;
- 	margin-bottom: 0px;
- }
+#accordion7 {
+	margin-bottom: 0px;
+}
 
- #actionBarButtons {
- 	padding-top: 8px;	
- }
+#featureDivider {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+#actionBarButtons {
+	padding-top: 8px;	
+}
+
+/* SMALL VIEWPORT */
+
+@media (max-width: 768px) {
+	.vertical-center:before {
+		height: auto;
+		/* Or */
+		display: none;
+	}
+}

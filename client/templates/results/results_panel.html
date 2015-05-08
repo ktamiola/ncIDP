@@ -5,32 +5,38 @@
 
 		<header>RESULTS</header>
 		
-		<div class="tools">
-
-			<a class="btn btn-icon-toggle btn-close ink-reaction" data-toggle="offcanvas" href="#database_help"><i class="md md-help"></i></a>
-
-		</div>
-
 	</div>
 
 	<!-- FIRST ROW - TWO EQUAL COLLUMNS -->
 	<div id="buttonContainer">
 		
-		<div id="actionContainer" class="row">
+		<div id="actionContainer">
 
 			<!-- COPY TO CLIPBOARD -->
-			<div class="col-md-12">
-				<center><button id="buttonCopy" type="button" class="btn btn-primary-bright btn-lg btn-block"><span class="pull-left"><i class="fa fa-copy"></i></span>COPY TO CLIPBOARD</button></center>
+			<div id="cell">
+				<center>
+					<div id="cellChild">
+						<button id="buttonCopy" type="button" class="btn btn-primary-bright btn-lg btn-block"><span class="pull-left"><i class="fa fa-copy"></i></span>COPY TO CLIPBOARD</button>
+					</div>
+				</center>
 			</div>
-			<!-- DIVIDER -->
 
-			<div class="col-md-12">
-				<div class="text-divider text-lg"><span>OR</span></div>
+			<!-- DIVIDER -->
+			<div id="cell">
+				<center>
+					<div id="cellChild">
+						<h4 class="text-default-light">OR</h4>
+					</div>
+				</center>
 			</div>
 
 			<!-- DOWNLOAD FILE -->
-			<div class="col-md-12">
-				<center><button id="buttonDownload" type="button" class="btn btn-primary-bright btn-lg btn-block"><span class="pull-left"><i class="fa fa-file-text-o"></i></span>DOWNLOAD</button></center>
+			<div id="cell">
+				<center>
+					<div id="cellChild">
+						<button id="buttonDownload" type="button" class="btn btn-primary-bright btn-lg btn-block"><span class="pull-left"><i class="fa fa-file-text-o"></i></span>DOWNLOAD</button>
+					</div>
+				</center>
 			</div>
 
 		</div>
