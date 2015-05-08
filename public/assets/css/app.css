@@ -5,6 +5,27 @@ Created to override the default sytling settings of selected elements
 
 */
 
+/*RESULT SECTION*/
+
+#toolContainer {
+	min-height: 491px;
+}
+
+#buttonContainer {
+	min-height: 435px;
+	width: 100%;
+}
+
+#result_actions {
+
+}
+
+#results_message {
+	box-shadow: none;
+}
+
+/*CORE SECTION*/
+
 #accordion7 {
 	margin-bottom: 0px;
 }

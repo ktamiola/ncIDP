@@ -1,5 +1,5 @@
 <!-- APPLICATION KERNEL TEMPLATE -->
-<template name="core">
+<template name="results">
 
 	<!-- BEGIN CONTENT-->
 	<div id="content">
@@ -9,7 +9,7 @@
 			<!-- SECTION HEADER -->
 			<div class="section-header">
 			</div>
-			<!-- END OF HEADER -->
+			<!-- END OF THE HEADER -->
 
 			<div class="section-body contain-lg">
 
@@ -18,23 +18,12 @@
 
 					{{> tool_description}}
 
-					<div class="col-lg-offset-1 col-md-8">
+					<div id="toolContainer" class="col-lg-offset-1 col-md-8">
 						<form class="form form-validate floating-label" novalidate="novalidate">
 							
 							<div class="card">
 
-								{{> navigation_and_input}}
-
-								<div id="featureDivider" class="text-divider"></div>
-
-								<!-- ACTION BAR -->
-								<div id="actionBarButtons" class="card-actionbar">
-									<div class="card-actionbar-row">
-										<button id="resetButton" type="submit" class="btn btn-flat btn-default ink-reaction">Reset</button>
-										<button id="calculateButton" type="submit" class="btn btn-flat btn-primary ink-reaction">Calculate</button>
-									</div>
-								</div>
-								<!-- END OF ACTION BAR -->
+								{{> results_panel}}
 
 							</div>
 							<!-- END OF CARD -->

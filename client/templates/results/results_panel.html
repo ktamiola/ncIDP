@@ -1,0 +1,73 @@
+<template name="results_panel">
+
+	<!-- CARD HEADERS -->
+	<div class="card-head card-head-s style-primary">
+
+		<header>RESULTS</header>
+		
+	</div>
+
+	<!-- ROW SETUP -->
+	<div class="row">
+
+		<div class="col-xs-4">
+
+			<div class="card contain-lg border-transparent no-margin" style="box-shadow: none; height: 100%;">
+
+				<div class="card-body style-primary-bright">
+					<dl class="dl-horizontal dl-icon">
+						<dt><span class="fa fa-fw fa-database fa-lg text-muted"></span></dt>
+						<dd>
+							<span class="text-muted text-muted">DATABASE</span><br/>
+							<span class="text-medium text-primary text-xl">TAMIOLA</span>
+						</dd>
+						<dt><span class="fa fa-fw fa-text-width fa-lg text-muted"></span></dt>
+						<dd>
+							<span class="text-muted">SEQUENCE</span><br/>
+							<span class="text-medium text-primary text-xl">100</span>
+						</dd>
+						<dt><span class="fa fa-fw fa-bar-chart fa-lg text-muted"></span></dt>
+						<dd>
+							<span class="text-muted">H/C RATIO</span><br/>
+							<span class="text-medium text-primary text-xl">100</span>
+						</dd>
+						<dt><span class="fa fa-fw fa-arrows-h fa-lg text-muted"></span></dt>
+						<dd>
+							<span class="text-muted">OFFSETS</span><br/>
+							<span class="text-medium text-primary text-lg">0.01ppm<br>0.01ppm<br>0.01ppm<br>0.01ppm<br>0.01ppm</span>
+						</dd>
+					</dl>
+				</div>
+			</div>
+
+		</div>
+
+		<!-- ACTIONS -->
+
+		<div class="col-xs-8">
+
+			<!-- REFERENCES -->
+
+			{{> results_references}}
+
+			<!-- START OF ACTIONS -->
+
+			{{> results_actions}}
+
+			<!-- END OF ACTION -->
+
+		</div>
+
+	</div>
+
+	<!-- TWEET -->
+
+<!-- 	<div class="card style-default-light">
+
+		<div class="card-body">
+			<button type="button" class="btn btn-info btn-block"><span class="pull-left"><i class="fa fa-twitter"></i></span>Tweet</button>
+		</div>
+
+	</div> -->
+	
+</template>
