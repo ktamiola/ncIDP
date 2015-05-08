@@ -1,0 +1,10 @@
+/*
+
+ncIDP app-wise stylesheet
+Created to override the default sytling settings of selected elements
+
+*/
+
+#accordion7 {
+	margin-bottom: 0px;
+}
