@@ -10,17 +10,21 @@ Created to override the default sytling settings of selected elements
 }
 
 #buttonContainer {
-	min-height: 435px;
+
 }
+
+#actionContainer {
+
+
+}
+
 
 /*Declarations for massive action buttons*/
 
 #buttonCopy, #buttonDownload {
-	height: 50%;
-	margin-bottom: 0px;
-	box-shadow: none;
-	padding-top: 0px;
-	padding-bottom: 0px;
+	max-width: 300px;
+	margin-top: 50px;
+	margin-bottom: 50px;
 }
 
 #accordion7 {
