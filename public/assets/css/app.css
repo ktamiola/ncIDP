@@ -10,32 +10,37 @@ Created to override the default sytling settings of selected elements
 }
 
 #buttonContainer {
-
+	min-height: 345px;
 }
 
 #actionContainer {
-
-
-}
-
-
-/*Declarations for massive action buttons*/
-
-#buttonCopy, #buttonDownload {
-	max-width: 300px;
 	margin-top: 50px;
-	margin-bottom: 50px;
+	margin-bottom: 50px;	
 }
 
-#accordion7 {
-	margin-bottom: 0px;
-}
+ .col-md-12 {
+ 	margin-top: 25px;
+ 	margin-bottom: 25px;
+ }
 
-#featureDivider {
-	margin-top: 0px;
-	margin-bottom: 0px;
-}
+ /*Declarations for massive action buttons*/
 
-#actionBarButtons {
-	padding-top: 8px;	
-}
+ #buttonCopy, #buttonDownload {
+ 	min-width: 300px;
+ 	max-width: 300px;
+ }
+
+ /*CORE SECTION*/
+
+ #accordion7 {
+ 	margin-bottom: 0px;
+ }
+
+ #featureDivider {
+ 	margin-top: 0px;
+ 	margin-bottom: 0px;
+ }
+
+ #actionBarButtons {
+ 	padding-top: 8px;	
+ }
