@@ -5,6 +5,8 @@ Created to override the default sytling settings of selected elements
 
 */
 
+/*RESULT SECTION*/
+
 #toolContainer {
 	min-height: 491px;
 }
@@ -14,26 +16,8 @@ Created to override the default sytling settings of selected elements
 	width: 100%;
 }
 
-/*Declarations for the action buttons*/
-
-#cell {
-	width: 100%;
-}
-
-#buttonCopy {
-	min-width: 300px;
-	max-width: 300px;
-	position: absolute;
-	display: inline-block;
-	top: 25%;
-}
-
-#buttonDownload {
-	min-width: 300px;
-	max-width: 300px;
-	position: absolute;
-	display: inline-block;
-	top: 75%;
+#actions {
+	padding-right: 24px;
 }
 
 /*CORE SECTION*/
