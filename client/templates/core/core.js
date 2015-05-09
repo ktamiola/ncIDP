@@ -365,13 +365,29 @@ Template.core.rendered = function () {
         "Only protein amino acids please. (Check for white spaces and special characters)"
 	);
 
+    // Do the recursive validation
+    // Check what has been valiadted
 	$('.form-validate').each(function () {
 		var validator = $(this).validate();
 		$(this).data('validator', validator);
 	});
 
+    // By default the submit button is disabled
+    Session.set('disabled', true);
 
 }
+
+Template.core.helpers({
+
+    // assign default falue
+    disabled : function() {
+        if (Session.get('disabled'))
+            return 'disabled';
+        else
+            return '';
+    },
+
+});
 
 // Event listener for the template
 Template.core.events({
@@ -420,5 +436,24 @@ Template.core.events({
 
 	},
 
+    // =========================================================================
+    // SUBMIT DATA
+    // =========================================================================
+
+    'click #calculateButton' : function (event) {
+
+        // prevent the default behavior
+        event.preventDefault();
+
+        // Check the outcome of the validation
+        if ( $('.form-validate').valid() ) {
+
+            // Retrieve the protein sequence
+            SEQUENCE = $('#sequence').val();
+
+        }
+
+        console.log(Session.get('disabled'));
+    }
 
 });
