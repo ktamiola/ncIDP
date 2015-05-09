@@ -70,7 +70,7 @@ Template.results.events({
         text = text.join('\n');
 
         var blob = new Blob([text], {type: "text/plain;charset=utf-8"});
-        saveAs(blob, SESSION_ID+'.tab');
+        saveAs(blob, 'ncIDP-'+SESSION_ID+'.txt');
 
     },
 
