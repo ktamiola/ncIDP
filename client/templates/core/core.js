@@ -465,7 +465,7 @@ Template.core.events({
         CB_OFFSET = Number($("#13CB_spinner").val()) || 0.0;
          C_OFFSET = Number($("#13C_spinner").val())  || 0.0;
 
-         console.log(H_OFFSET, HA_OFFSET);
+         // Do the calculation
 
     }
 
