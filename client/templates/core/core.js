@@ -406,10 +406,15 @@ Template.core.events({
 
 		// prevent the default behavior -> setting the link URL with hashtag
 		event.preventDefault();
-		// display the tab of interest
+		
+        // display the tab of interest
 		$(event.target).tab('show');
+
 		// Retrieve the type of the database
-		Session.set('database', 'TamiolaDB');
+		Session.set('database', $(event.target).attr("data"));
+
+        // Set the global variable
+        DATABASE = $(event.target).attr("data");
 
 	},
 
@@ -425,6 +430,9 @@ Template.core.events({
 		// set the default database
         // in that particular case the Tamiola 2010 database
 		Session.set('database', 'Tamiola2010');
+
+        // Set the default value
+        DATABASE = 'Tamiola2010';
 		
 		// display the tab of interest
 		$('#defaultDB').tab('show');
