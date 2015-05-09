@@ -55,30 +55,40 @@ Template.results.events({
 	// RESET FORMS
 	// =========================================================================
 
-	'click #resetButton' : function (event) {
+	'click #downloadButton' : function (event) {
 
 		// prevent the default behavior
 		event.preventDefault();
 		
-		// set the default database
-        // in that particular case the Tamiola 2010 database
-        Session.set('database', 'TamiolaDB');
+        // log
+        console.log("Download...");
+    },
 
-		// display the tab of interest
-		$('#defaultDB').tab('show');
+    'click #sendEmailButton' : function (event) {
 
-		// Clean sequence text input
-		$('#sequence').val("");
-		
-		// Clean the offset values
-		$("#HA_spinner").val("0.00");
-		$("#HN_spinner").val("0.00");
-		$("#13CA_spinner").val("0.00");
-		$("#13CB_spinner").val("0.00");
-		$("#13C_spinner").val("0.00");
-		$("#15N_spinner").val("0.00");
+        // prevent the default behavior
+        event.preventDefault();
+        
+        // log
+        console.log("Email...");
+    },
 
-	},
+    'click #shareToolButton' : function (event) {
 
+        // prevent the default behavior
+        event.preventDefault();
+        
+        // log
+        console.log("Twitter...");
+    },
+
+    'click #getReferenceButton' : function (event) {
+
+        // prevent the default behavior
+        event.preventDefault();
+        
+        // log
+        console.log("Get the reference...");
+    },
 
 });
