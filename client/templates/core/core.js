@@ -424,7 +424,7 @@ Template.core.events({
 		
 		// set the default database
         // in that particular case the Tamiola 2010 database
-		Session.set('database', 'TamiolaDB');
+		Session.set('database', 'Tamiola2010');
 		
 		// display the tab of interest
 		$('#defaultDB').tab('show');
@@ -465,7 +465,8 @@ Template.core.events({
         CB_OFFSET = Number($("#13CB_spinner").val()) || 0.0;
          C_OFFSET = Number($("#13C_spinner").val())  || 0.0;
 
-         // Do the calculation
+        // Initialize route to results page
+
 
     }
 
