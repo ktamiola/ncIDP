@@ -72,8 +72,6 @@ Template.results.events({
 		// prevent the default behavior
 		event.preventDefault();
 		
-        // log
-        console.log("Download...");
     },
 
     'click #sendEmailButton' : function (event) {
