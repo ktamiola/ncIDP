@@ -1,4 +1,3 @@
-// Helpers
 Template.results_panel.helpers ({
 
 	database : function () {
@@ -15,7 +14,7 @@ Template.results_panel.helpers ({
 		if (HC_RATIO > 0.0) {
 			return HC_RATIO.toFixed(2);
 		} else {
-			return 'Unknown';
+			return '0.00';
 		}
 	},
 
@@ -42,6 +41,5 @@ Template.results_panel.helpers ({
 	C : function () {
 		return C_OFFSET.toFixed(2);
 	}
-
 
 });

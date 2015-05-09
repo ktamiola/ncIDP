@@ -1,10 +1,3 @@
-// =========================================================================
-// DO THE CALCULATIONS
-// =========================================================================
-
-HC_RATIO = ratio(SEQUENCE);
-PREDICTION = prediction(SEQUENCE);
-
 // Invoked when template gets rendered
 Template.results.rendered = function () {
 
@@ -71,6 +64,9 @@ Template.results.events({
 
 		// prevent the default behavior
 		event.preventDefault();
+
+        // 
+        console.log(this.data);
 		
     },
 
