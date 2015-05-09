@@ -65,8 +65,10 @@ Template.results.events({
 		// prevent the default behavior
 		event.preventDefault();
 
-        // 
-        console.log(this.data);
+        // Output the consolidated data
+        var downloadText = this.data;
+        downloadText = downloadText.join('\n');
+        console.log(downloadText);
 		
     },
 
