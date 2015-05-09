@@ -1,6 +1,12 @@
 // Invoked when template gets rendered
 Template.results.rendered = function () {
 
+    // =========================================================================
+    // DO THE CALCULATIONS
+    // =========================================================================
+
+    HC_RATIO = HC_ratio(SEQUENCE);
+
 	// =========================================================================
 	// INK REACTION EFFECT
 	// =========================================================================
@@ -48,6 +54,11 @@ Template.results.rendered = function () {
 
 }
 
+// Helpers
+Template.results.helpers ({
+
+});
+
 // Event listener for the template
 Template.results.events({
 
@@ -82,13 +93,13 @@ Template.results.events({
         console.log("Twitter...");
     },
 
-    'click #getReferenceButton' : function (event) {
+    'click #startNewButton' : function (event) {
 
         // prevent the default behavior
         event.preventDefault();
         
-        // log
-        console.log("Get the reference...");
+        // Go to home
+        Router.go('/');
     },
 
 });

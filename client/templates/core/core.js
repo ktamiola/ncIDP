@@ -465,6 +465,9 @@ Template.core.events({
         // Retrieve the protein sequence
         SEQUENCE = $('#sequence').val();
 
+        // Capitalize
+        SEQUENCE = SEQUENCE.toUpperCase();
+
         // Retrieve offset values
          H_OFFSET = Number($("#HN_spinner").val())   || 0.0;
         HA_OFFSET = Number($("#HA_spinner").val())   || 0.0;
@@ -474,7 +477,7 @@ Template.core.events({
          C_OFFSET = Number($("#13C_spinner").val())  || 0.0;
 
         // Initialize route to results page
-
+        Router.go('/results');
 
     }
 
