@@ -315,12 +315,21 @@ Template.core.rendered = function () {
 	// INPUT DATA VALIDATION
 	// =========================================================================
 
+    // Disable the CALCULATE button by default
+    Session.set('valid', false);
+
+    // Validator options
 	$.validator.setDefaults({
+        success: function () {
+            Session.set('valid', true);
+        },
 		highlight: function (element) {
 			$(element).closest('.form-group').addClass('has-error');
+            Session.set('valid', false);
 		},
 		unhighlight: function (element) {
 			$(element).closest('.form-group').removeClass('has-error');
+            Session.set('valid', true);
 		},
 		errorElement: 'span',
 		errorClass: 'help-block',
@@ -365,13 +374,26 @@ Template.core.rendered = function () {
         "Only protein amino acids please. (Check for white spaces and special characters)"
 	);
 
+    // Do the recursive validation
+    // Check what has been valiadted
 	$('.form-validate').each(function () {
 		var validator = $(this).validate();
 		$(this).data('validator', validator);
 	});
 
-
 }
+
+Template.core.helpers({
+
+    // Helper function that controls the submit button
+    disabled : function() {
+        if ( Session.get('valid') )
+            return '';
+        else
+            return 'disabled';
+    },
+
+});
 
 // Event listener for the template
 Template.core.events({
@@ -418,7 +440,33 @@ Template.core.events({
 		$("#13C_spinner").val("0.00");
 		$("#15N_spinner").val("0.00");
 
+        // Disable the submitbutton
+        Session.set('valid', false);
+
 	},
 
+    // =========================================================================
+    // SUBMIT DATA
+    // =========================================================================
+
+    'click #calculateButton' : function (event) {
+
+        // prevent the default behavior
+        event.preventDefault();
+
+        // Retrieve the protein sequence
+        SEQUENCE = $('#sequence').val();
+
+        // Retrieve offset values
+         H_OFFSET = Number($("#HN_spinner").val())   || 0.0;
+        HA_OFFSET = Number($("#HA_spinner").val())   || 0.0;
+         N_OFFSET = Number($("#15N_spinner").val())  || 0.0;
+        CA_OFFSET = Number($("#13CA_spinner").val()) || 0.0;
+        CB_OFFSET = Number($("#13CB_spinner").val()) || 0.0;
+         C_OFFSET = Number($("#13C_spinner").val())  || 0.0;
+
+         // Do the calculation
+
+    }
 
 });
