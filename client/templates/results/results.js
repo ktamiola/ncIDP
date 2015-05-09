@@ -66,10 +66,12 @@ Template.results.events({
 		event.preventDefault();
 
         // Output the consolidated data
-        var downloadText = this.data;
-        downloadText = downloadText.join('\n');
-        console.log(downloadText);
-		
+        var text = this.data;
+        text = text.join('\n');
+
+        var blob = new Blob([text], {type: "text/plain;charset=utf-8"});
+        saveAs(blob, SESSION_ID+'.tab');
+
     },
 
     'click #sendEmailButton' : function (event) {
