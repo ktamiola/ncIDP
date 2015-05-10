@@ -87,6 +87,12 @@ Template.results.events({
         var blob = new Blob([text], {type: "text/plain;charset=utf-8"});
         saveAs(blob, 'ncIDP-'+SESSION_ID+'.txt');
 
+        // hide the action list
+        $('#actionList').fadeOut("slow", function() {
+            // show share
+            $('#shareAction').fadeIn("slow");      
+        });
+
     },
 
     'click #sendEmailButton' : function (event) {
@@ -105,6 +111,12 @@ Template.results.events({
         var subject = '[AUTO] ncIDP Prediction - Session ID: ' + SESSION_ID;
         window.location = 'mailto:' + email + '?subject=' + subject + '&body=' +  header + text;
 
+        // hide the action list
+        $('#actionList').fadeOut("slow", function() {
+            // show share
+            $('#shareAction').fadeIn("slow");      
+        });
+
     },
 
     'click #shareToolButton' : function (event) {
@@ -112,21 +124,27 @@ Template.results.events({
         // prevent the default behavior
         event.preventDefault();
         
-       $('#resultsCard').fadeOut();        
+        var link = "";
+        var text = 'Check out ncIDP random coil chemical shift prediction tool by @alpine_photo #ncIDP #NMR -> ';
 
-    },
+        // Initialize twitter share
+        window.open('http://twitter.com/share?url=' + link + '&text=' + text + '&', 'twitterwindow', 'height=450, width=550, top='+($(window).height()/2 - 225) +', left='+$(window).width()/2 +', toolbar=0, location=0, menubar=0, directories=0, scrollbars=0');
 
-    'click #startNewButton' : function (event) {
-
-        // prevent the default behavior
-        event.preventDefault();
-
-        // Fade out animation
+           // Fade out animation
         $( ".section-body" ).fadeOut( "slow", function() {
             // Animation complete.
             // Initialize route to the core page
             Router.go('/');
         });
+
+   },
+
+   'click #startNewButton' : function (event) {
+
+        // prevent the default behavior
+        event.preventDefault();
+
+        
         
     },
 
