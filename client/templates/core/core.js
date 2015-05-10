@@ -1,6 +1,12 @@
 // Invoked when template gets rendered
 Template.core.rendered = function () {
 
+    // =========================================================================
+    // HIDE
+    // =========================================================================
+
+    $( ".section-body" ).hide();
+
 	// =========================================================================
 	// FLOATING LABELS IN THE TEXT AREA
 	// =========================================================================
@@ -381,6 +387,12 @@ Template.core.rendered = function () {
 		$(this).data('validator', validator);
 	});
 
+    // =========================================================================
+    // ANIMATION
+    // =========================================================================
+
+    $( ".section-body" ).fadeIn();
+
 }
 
 Template.core.helpers({
@@ -476,8 +488,12 @@ Template.core.events({
         CB_OFFSET = Number($("#13CB_spinner").val()) || 0.0;
          C_OFFSET = Number($("#13C_spinner").val())  || 0.0;
 
-        // Initialize route to results page
-        Router.go('/results');
+        // Fade out animation
+        $( ".section-body" ).fadeOut( "slow", function() {
+            // Animation complete.
+            // Initialize route to results page
+            Router.go('/results');
+        });
 
     }
 

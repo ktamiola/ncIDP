@@ -1,6 +1,12 @@
 // Invoked when template gets rendered
 Template.results.rendered = function () {
 
+    // =========================================================================
+    // HIDE
+    // =========================================================================
+
+    $( ".section-body" ).hide();
+
 	// =========================================================================
 	// INK REACTION EFFECT
 	// =========================================================================
@@ -45,6 +51,14 @@ Template.results.rendered = function () {
         var luma = 0.2126 * r + 0.7152 * g + 0.0722 * b;
         return luma;
     };
+
+    // =========================================================================
+    // ANIMATION
+    // =========================================================================
+
+    $( ".section-body" ).fadeIn( "slow", function() {
+        // Animation complete.
+    });
 
 }
 
@@ -96,9 +110,14 @@ Template.results.events({
 
         // prevent the default behavior
         event.preventDefault();
+
+        // Fade out animation
+        $( ".section-body" ).fadeOut( "slow", function() {
+            // Animation complete.
+            // Initialize route to the core page
+            Router.go('/');
+        });
         
-        // Go to home
-        Router.go('/');
     },
 
 });
