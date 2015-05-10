@@ -20,6 +20,13 @@ Created to override the default sytling settings of selected elements
 	box-shadow: none;
 }
 
+#featureDivider {
+
+	padding-top: 25px;
+	padding-bottom: 25px;
+
+}
+
 /*CORE SECTION*/
 
 #accordion7 {
