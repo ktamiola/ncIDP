@@ -130,7 +130,7 @@ Template.results.events({
         // Initialize twitter share
         window.open('http://twitter.com/share?url=' + link + '&text=' + text + '&', 'twitterwindow', 'height=450, width=550, top='+($(window).height()/2 - 225) +', left='+$(window).width()/2 +', toolbar=0, location=0, menubar=0, directories=0, scrollbars=0');
 
-           // Fade out animation
+        // Fade out animation
         $( ".section-body" ).fadeOut( "slow", function() {
             // Animation complete.
             // Initialize route to the core page
@@ -143,8 +143,13 @@ Template.results.events({
 
         // prevent the default behavior
         event.preventDefault();
-
         
+         // Fade out animation
+        $( ".section-body" ).fadeOut( "slow", function() {
+            // Animation complete.
+            // Initialize route to the core page
+            Router.go('/');
+        });
         
     },
 
