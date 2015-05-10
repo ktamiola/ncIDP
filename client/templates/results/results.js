@@ -93,8 +93,17 @@ Template.results.events({
         // prevent the default behavior
         event.preventDefault();
         
-        // log
-        console.log("Email...");
+        var header = '** Predicted data **%0D%0A%0D%0A';
+        // Output the consolidated data
+        var text = this.data;
+        text = text.join('%0D%0A');
+        text += '%0D%0A%0D%0A** End of prediction **';
+
+        // Prepare email
+        var email = '';
+        var subject = '[AUTO] ncIDP Prediction - Session ID: ' + SESSION_ID;
+        window.location = 'mailto:' + email + '?subject=' + subject + '&body=' +  header + text;
+
     },
 
     'click #shareToolButton' : function (event) {
