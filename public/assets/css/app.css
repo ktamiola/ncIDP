@@ -16,10 +16,6 @@ Created to override the default sytling settings of selected elements
 	width: 100%;
 }
 
-#result_actions {
-
-}
-
 #results_message {
 	box-shadow: none;
 }
