@@ -95,7 +95,7 @@ Template.results.events({
         
         // Output the consolidated data
         var text = this.data;
-        text = text.join('\n\r');
+        text = text.join('%0D%0A');
 
         // Prepare email
         var email = '';
