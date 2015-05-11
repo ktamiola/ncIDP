@@ -492,7 +492,7 @@ Template.core.events({
         $( ".section-body" ).fadeOut( "slow", function() {
             // Animation complete.
             // Initialize route to results page
-            Router.go('/results');
+            Router.go('results');
         });
 
     }

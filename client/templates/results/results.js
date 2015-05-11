@@ -134,7 +134,7 @@ Template.results.events({
         $( ".section-body" ).fadeOut( "slow", function() {
             // Animation complete.
             // Initialize route to the core page
-            Router.go('/');
+            Router.go('core');
         });
 
    },
@@ -148,7 +148,7 @@ Template.results.events({
         $( ".section-body" ).fadeOut( "slow", function() {
             // Animation complete.
             // Initialize route to the core page
-            Router.go('/');
+            Router.go('core');
         });
         
     },
