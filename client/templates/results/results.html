@@ -1,51 +1,53 @@
 <!-- APPLICATION KERNEL TEMPLATE -->
 <template name="results">
 
-	<!-- BEGIN CONTENT-->
-	<div id="content">
+  <!-- BEGIN CONTENT-->
+  <div id="content">
 
-		<section>
+    <section>
 
-			<!-- SECTION HEADER -->
-			<div class="section-header">
-			</div>
-			<!-- END OF THE HEADER -->
+      <!-- SECTION HEADER -->
+      <div class="section-header">
+      </div>
+      <!-- END OF THE HEADER -->
 
-			<div class="section-body contain-lg">
+      <div class="section-body contain-lg">
 
-				<!-- BEGIN BASIC VALIDATION -->
-				<div class="row">
+        <!-- BEGIN BASIC VALIDATION -->
+        <div class="row">
 
-					<div id="toolContainer" class="col-md-12">
-						<form class="form form-validate floating-label" novalidate="novalidate">
-							
-							<div id="resultsCard" class="card">
+          <div id="toolContainer" class="col-md-12">
+            <form class="form form-validate floating-label" novalidate="novalidate">
 
-								{{> results_panel}}
+              <div id="resultsCard" class="card">
 
-							</div>
-							<!-- END OF CARD -->
+                {{> results_panel}}
 
-						</form>
-					</div><!--end .col -->
-				</div><!--end .row -->
-				<!-- END BASIC VALIDATION -->
+              </div>
+              <!-- END OF CARD -->
 
-				<!-- BEGIN BASE / THIS TAG IS IMPORTANT FOR THE HELP SYSTEM / DO NOT REMOVE-->
-				<div id="base">
+            </form>
+          </div>
+          <!--end .col -->
+        </div>
+        <!--end .row -->
+        <!-- END BASIC VALIDATION -->
 
-					<!-- HELP CANVAS FOR DATABASE SELECTION -->
-					{{> database_help}}
+        <!-- BEGIN BASE / THIS TAG IS IMPORTANT FOR THE HELP SYSTEM / DO NOT REMOVE-->
+        <div id="base">
 
-					<!-- HELP CANVAS FOR CHEMICAL SHIFT OFFSET SETTINGS -->
-					{{> offset_help}}
+          <!-- HELP CANVAS FOR DATABASE SELECTION -->
+          {{> database_help}}
 
-				</div>
-				<!-- END OF BASE -->
+          <!-- HELP CANVAS FOR CHEMICAL SHIFT OFFSET SETTINGS -->
+          {{> offset_help}}
 
-			</div>
+        </div>
+        <!-- END OF BASE -->
 
-		</section>
-	</div>
+      </div>
+
+    </section>
+  </div>
 
 </template>

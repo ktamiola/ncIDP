@@ -1,73 +1,90 @@
 <template name="results_panel">
 
-	<!-- CARD HEADERS -->
-	<div class="card-head card-head-s style-primary">
+  <!-- CARD HEADERS -->
+  <div class="card-head card-head-s style-primary">
 
-		<header>RESULTS</header>
-		
-	</div>
+    <header>RESULTS</header>
 
-	<!-- ROW SETUP -->
-	<div class="row">
+  </div>
 
-		<div class="col-xs-4">
+  <!-- ROW SETUP -->
+  <div class="row">
 
-			<div class="card contain-lg border-transparent no-margin" style="box-shadow: none; height: 100%;">
+    <div class="col-xs-4">
 
-				<div class="card-body style-primary-bright">
-					<dl class="dl-horizontal dl-icon">
-						<dt><span class="fa fa-fw fa-database fa-lg text-muted"></span></dt>
-						<dd>
-							<span class="text-muted text-muted">DATABASE</span><br/>
-							<span class="text-medium text-primary text-xl">{{database}}</span>
-						</dd>
-						<dt><span class="fa fa-fw fa-text-width fa-lg text-muted"></span></dt>
-						<dd>
-							<span class="text-muted">SEQUENCE</span><br/>
-							<span class="text-medium text-primary text-xl">{{length}}</span>
-						</dd>
-						<dt><span class="fa fa-fw fa-bar-chart fa-lg text-muted"></span></dt>
-						<dd>
-							<span class="text-muted">C/H RATIO</span><br/>
-							<span class="text-medium text-primary text-xl">{{hc}}</span>
-						</dd>
-						<dt><span class="fa fa-fw fa-arrows-h fa-lg text-muted"></span></dt>
-						<dd>
-							<span class="text-muted">OFFSETS</span><br/>
-							<span class="text-medium text-primary text-lg"><sup>1</sup>H&nbsp;{{H}}&nbsp;ppm<br><sup>1</sup>HA&nbsp;{{HA}}&nbsp;ppm<br><sup>15</sup>N&nbsp;{{N}}&nbsp;ppm<br><sup>13</sup>C&nbsp;{{C}}&nbsp;ppm<br><sup>13</sup>CA&nbsp;{{CA}}&nbsp;ppm<br><sup>13</sup>CB&nbsp;{{CB}}&nbsp;ppm</span>
-						</dd>
-					</dl>
-				</div>
-			</div>
+      <div class="card contain-lg border-transparent no-margin" style="box-shadow: none; height: 100%;">
 
-		</div>
+        <div class="card-body style-primary-bright">
+          <dl class="dl-horizontal dl-icon">
+            <dt>
+              <span class="fa fa-fw fa-database fa-lg text-muted"></span>
+            </dt>
+            <dd>
+              <span class="text-muted text-muted">DATABASE</span>
+              <br/>
+              <span class="text-medium text-primary text-xl">{{database}}</span>
+            </dd>
+            <dt>
+              <span class="fa fa-fw fa-text-width fa-lg text-muted"></span>
+            </dt>
+            <dd>
+              <span class="text-muted">LENGTH</span>
+              <br/>
+              <span class="text-medium text-primary text-xl">{{length}}</span>
+            </dd>
+            <dt>
+              <span class="fa fa-fw fa-bar-chart fa-lg text-muted"></span>
+            </dt>
+            <dd>
+              <span class="text-muted">C/H RATIO</span>
+              <br/>
+              <span class="text-medium text-primary text-xl">{{hc}}</span>
+            </dd>
+            <dt>
+              <span class="fa fa-fw fa-arrows-h fa-lg text-muted"></span>
+            </dt>
+            <dd>
+              <span class="text-muted">OFFSETS</span>
+              <br/>
+              <span class="text-medium text-primary text-lg"><sup>1</sup>H&nbsp;{{H}}&nbsp;ppm
+                <br><sup>1</sup>HA&nbsp;{{HA}}&nbsp;ppm
+                <br><sup>15</sup>N&nbsp;{{N}}&nbsp;ppm
+                <br><sup>13</sup>C&nbsp;{{C}}&nbsp;ppm
+                <br><sup>13</sup>CA&nbsp;{{CA}}&nbsp;ppm
+                <br><sup>13</sup>CB&nbsp;{{CB}}&nbsp;ppm</span>
+            </dd>
+          </dl>
+        </div>
+      </div>
 
-		<!-- ACTIONS -->
+    </div>
 
-		<div class="col-xs-8">
+    <!-- ACTIONS -->
 
-			<!-- REFERENCES -->
+    <div class="col-xs-8">
 
-			{{> results_references}}
+      <!-- REFERENCES -->
 
-			<!-- START OF ACTIONS -->
+      {{> results_references}}
 
-			{{> results_actions}}
+      <!-- START OF ACTIONS -->
 
-			<!-- END OF ACTION -->
+      {{> results_actions}}
 
-		</div>
+      <!-- END OF ACTION -->
 
-	</div>
+    </div>
 
-	<!-- TWEET -->
+  </div>
 
-<!-- 	<div class="card style-default-light">
+  <!-- TWEET -->
+
+  <!-- 	<div class="card style-default-light">
 
 		<div class="card-body">
 			<button type="button" class="btn btn-info btn-block"><span class="pull-left"><i class="fa fa-twitter"></i></span>Tweet</button>
 		</div>
 
 	</div> -->
-	
+
 </template>
