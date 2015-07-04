@@ -1,10 +1,14 @@
 # ncIDP
 
-TODO: Write a project description
+Polypeptide backbone NMR chemical shifts are proven powerful descriptors of local dynamic deviations from the "random coil" state toward canonical types of secondary structure. These digressions, in turn, can be connected to functional or dysfunctional protein states, for example, in adaptive molecular recognition and protein aggregation.  
+
+The **ncIDP tool** makes use of backbone (15)N, (1)H(N), (1)H(α), (13)C(O), (13)C(β), and (13)C(α) chemical shifts derived from a set of 14 intrinsically disordered proteins of unrelated sequence and function. The **ncIDP** prediction accuracy is significantly higher than that obtained with libraries for small peptides or "coil" regions of folded proteins.
 
 ## Installation
 
-TODO: Describe the installation process
+I strongly recommend selecting a decent cloud-based storage and installing the app on an Nginx-powered server.  
+
+I have personally followed this setup guide, and it worked like a charm: https://www.digitalocean.com/community/tutorials/how-to-deploy-a-meteor-js-application-on-ubuntu-14-04-with-nginx
 
 ## Usage
 
