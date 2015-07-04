@@ -1,0 +1,55 @@
+<template name="navigation_and_input">
+
+  <!-- CARD HEADERS -->
+  <div class="card-head card-head-s style-primary">
+
+    <header>Select random-coil NMR library</header>
+    <div class="tools">
+      <a class="btn btn-icon-toggle btn-close ink-reaction" data-toggle="offcanvas" href="#database_help"><i class="md md-help"></i></a>
+    </div>
+
+  </div>
+
+  <div class="card-head">
+
+    <ul class="nav nav-tabs nav-justified" data-toggle="tabs">
+      <li id="defaultDB" class="active"><a data="Tamiola2010" href="#Tamiola2010">Tamiola</a></li>
+      <li><a data="Wang2002" href="#Wang2002">Wang</a></li>
+      <li><a data="Schwarzinger2001" href="#Schwarzinger2001">Schwarzinger</a></li>
+      <li><a data="Wishart1995" href="#Wishart1995">Wishart</a></li>
+      <li><a data="Wuhtrich1994" href="#Wuhtrich1994">W&Uuml;htrich</a></li>
+    </ul>
+  </div>
+  <!-- END OF HEADERS -->
+
+  <div class="card-body tab-content">
+
+    <div class="tab-pane active" id="Tamiola2010">
+    </div>
+
+    <div class="tab-pane" id="Wang2002">
+    </div>
+
+    <div class="tab-pane" id="Schwarzinger2001">
+    </div>
+
+    <div class="tab-pane" id="Wishart1995">
+    </div>
+
+    <div class="tab-pane" id="Wuhtrich1994">
+    </div>
+
+    <!-- PROTEIN SEQUENCE -->
+    <div class="form-group floating-label">
+      <textarea style="text-transform: uppercase;" name="sequence" id="sequence" class="form-control" rows="8" required data-rule-minlength="3" data-msg-minlength="Your polypeptide should be at least 3 amino acids long." sequence="FASTA"></textarea>
+      <label for="sequence">Protein Sequence</label>
+    </div>
+    <!-- END OF PROTEIN SEQUENCE -->
+
+    <!-- EXTRA FEATURES TEMPLATE -->
+    {{> extra_features}}
+
+  </div>
+  <!--end .card-body -->
+
+</template>

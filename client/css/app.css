@@ -1,0 +1,48 @@
+/*
+
+ncIDP app-wise stylesheet
+Created to override the default sytling settings of selected elements
+
+*/
+
+/*RESULT SECTION*/
+
+#toolContainer {
+	min-height: 491px;
+}
+
+#buttonContainer {
+	min-height: 435px;
+	width: 100%;
+}
+
+#results_message {
+	box-shadow: none;
+}
+
+#featureDivider {
+	padding-top: 25px;
+	padding-bottom: 25px;
+}
+
+#shareAction {
+	display: none;
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+	box-shadow: none;
+}
+
+/*CORE SECTION*/
+
+#accordion7 {
+	margin-bottom: 0px;
+}
+
+#featureDivider {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+#actionBarButtons {
+	padding-top: 8px;	
+}
