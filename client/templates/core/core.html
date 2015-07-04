@@ -1,0 +1,258 @@
+<!-- APPLICATION KERNEL TEMPLATE -->
+<template name="core">
+
+	<!-- BEGIN CONTENT-->
+	<div id="content">
+
+		<section>
+
+			<div class="section-body contain-lg">
+
+				<!-- BEGIN BASIC VALIDATION -->
+				<div class="row">
+
+					<div class="col-lg-12">
+						<h1 class="text-primary">ncIDP</h1>
+					</div><!--end .col -->
+
+					<div class="col-lg-3 col-md-4">
+						<article class="margin-bottom-xxl">
+							<p class="lead">
+								Chemical shift predictions for intrinsically disordered polypeptides
+							</p>
+							<p>
+								Validation can be added directly into your HTML.
+								This way you don't have to dive into your javascript everytime you need to add some rules.
+								Clientside validation can be activated when you add <code>.form-validate</code> to your form.
+							</p>
+						</article>
+					</div><!--end .col -->
+
+					<div class="col-lg-offset-1 col-md-8">
+						<form class="form form-validate floating-label" novalidate="novalidate">
+							<div class="card">
+
+								<!-- CARD HEADERS -->
+								<div class="card-head card-head-s style-primary">
+
+									<header>CHEMICAL SHIFT DATABASE</header>
+									<div class="tools">
+										<a class="btn btn-icon-toggle btn-close ink-reaction" data-toggle="offcanvas" href="#help"><i class="md md-help"></i></a>
+									</div>
+
+								</div>
+
+								<div class="card-head">
+
+									<ul class="nav nav-tabs nav-justified" data-toggle="tabs">
+										<li class="active"><a href="#TamiolaDB">Tamiola</a></li>
+										<li><a href="#WangDB">Wang</a></li>
+										<li><a href="#SchwarzingerDB">Schwarzinger</a></li>
+										<li><a href="#WuhtrichDB">Wuhtrich</a></li>
+									</ul>
+								</div>
+								<!-- END OF HEADERS -->
+
+								<div class="card-body tab-content">
+
+									<div class="tab-pane active" id="TamiolaDB">
+										<!-- PROTEIN SEQUENCE -->
+										<div class="form-group">
+											<textarea style="text-transform: uppercase;" name="sequence" id="sequence" class="form-control" rows="6" required></textarea>
+											<label for="sequence">Protein Sequence</label>
+										</div>
+										<!-- END OF PROTEIN SEQUENCE -->
+									</div>
+
+									<div class="tab-pane" id="WangDB">
+										<!-- PROTEIN SEQUENCE -->
+										<div class="form-group">
+											<textarea style="text-transform: uppercase;" name="sequence" id="sequence" class="form-control" rows="6" required></textarea>
+											<label for="sequence">Protein Sequence</label>
+										</div>
+										<!-- END OF PROTEIN SEQUENCE -->
+									</div>
+
+									<div class="tab-pane" id="SchwarzingerDB">
+										<!-- PROTEIN SEQUENCE -->
+										<div class="form-group">
+											<textarea style="text-transform: uppercase;" name="sequence" id="sequence" class="form-control" rows="6" required></textarea>
+											<label for="sequence">Protein Sequence</label>
+										</div>
+										<!-- END OF PROTEIN SEQUENCE -->
+									</div>
+
+									<div class="tab-pane" id="WuhtrichDB">
+										<!-- PROTEIN SEQUENCE -->
+										<div class="form-group">
+											<textarea style="text-transform: uppercase;" name="sequence" id="sequence" class="form-control" rows="6" required></textarea>
+											<label for="sequence">Protein Sequence</label>
+										</div>
+										<!-- END OF PROTEIN SEQUENCE -->
+									</div>
+
+									<!-- EXTRA FEATURES WILL COME HERE -->
+
+									<div class="panel-group" id="accordion7">
+										<div class="card panel" style="border-radius: 0px 0px 0px 0px; box-shadow: none;">
+
+											<div class="card-head style-primary card-head-sm collapsed ink-reaction" data-toggle="collapse" data-parent="#accordion7" data-target="#accordion7-1">
+												<header>Extra Processing Options</header>
+												<div class="tools">
+													<a class="btn btn-icon-toggle ink-reaction"><i class="fa fa-plus"></i></a>
+												</div>
+											</div>
+											<div id="accordion7-1" class="collapse">
+												<div class="card-body">
+
+													<p>Apply chemical shift offset corrections <a class="btn btn-icon-toggle btn-close ink-reaction" data-toggle="help2"><i class="md md-help"></i></a></p>												
+
+													<!-- CHEMICAL SHIFT OFFSET SPINNERS -->
+
+													<form class="form">
+
+														<!-- START OF ROW -->
+														<div class="row">
+
+															<div class="col-md-6">
+
+																<div class="form-group">
+																	<input type="text" class="form-control" id="HA_spinner" value="0.00"/>
+																	<label>1HA</label>
+																</div>
+
+															</div>
+
+															<div class="col-md-6">
+
+																<div class="form-group">
+																	<input type="text" class="form-control" id="HN_spinner" value="0.00"/>
+																	<label>1HN</label>
+																</div>
+
+															</div>
+
+														</div>
+														<!-- END OF ROW -->
+
+														<!-- START OF ROW -->
+														<div class="row">
+
+															<div class="col-md-6">
+
+																<div class="form-group">
+																	<input type="text" class="form-control" id="13C_spinner" value="0.00"/>
+																	<label>13C</label>
+																</div>
+
+															</div>
+
+															<div class="col-md-6">
+
+																<div class="form-group">
+																	<input type="text" class="form-control" id="13CA_spinner" value="0.00"/>
+																	<label>13CA</label>
+																</div>
+
+															</div>
+
+														</div>
+														<!-- END OF ROW -->
+
+														<!-- START OF ROW -->
+														<div class="row">
+
+															<div class="col-md-6">
+
+																<div class="form-group">
+																	<input type="text" class="form-control" id="13CB_spinner" value="0.00"/>
+																	<label>13CB</label>
+																</div>
+
+															</div>
+
+															<div class="col-md-6">
+
+																<div class="form-group">
+																	<input type="text" class="form-control" id="15N_spinner" value="0.00"/>
+																	<label>15N</label>
+																</div>
+
+															</div>
+
+														</div>
+														<!-- END OF ROW -->
+
+													</form>
+
+													<!-- THE END OF THE SPINNER SECTION -->
+
+												</div>
+											</div>
+
+										</div>
+									</div>
+
+									<!-- THE END OF EXTRA FEATURES -->
+
+								</div><!--end .card-body -->
+
+								<div class="card-actionbar">
+									<div class="card-actionbar-row">
+										<button type="submit" class="btn btn-flat btn-primary ink-reaction">Calculate</button>
+									</div>
+								</div><!--end .card-actionbar -->
+							</div><!--end .card -->
+						</form>
+					</div><!--end .col -->
+				</div><!--end .row -->
+				<!-- END BASIC VALIDATION -->
+
+
+				<!-- BEGIN BASE-->
+				<div id="base">
+
+					<!-- BEGIN OFFCANVAS LEFT -->
+					<div class="offcanvas">
+
+						<!-- BEGIN OFFCANVAS DEMO LEFT -->
+						<div id="help" class="offcanvas-pane width-6">
+							<div class="offcanvas-head">
+								<header>Left off-canvas</header>
+								<div class="offcanvas-tools">
+									<a class="btn btn-icon-toggle btn-default-light pull-right" data-dismiss="offcanvas">
+										<i class="md md-close"></i>
+									</a>
+								</div>
+							</div>
+							<div class="offcanvas-body">
+								<p>
+									An off-canvas can hold any content you want.
+								</p>
+								<p>
+									Close this off-canvas by clicking on the backdrop or press the close button in the upper right corner.
+								</p>
+								<p>&nbsp;</p>
+								<h4>Some details</h4>
+								<ul class="list-divided">
+									<li><strong>Width</strong><br/><span class="opacity-75">240px</span></li>
+									<li><strong>Height</strong><br/><span class="opacity-75">100%</span></li>
+									<li><strong>Body scroll</strong><br/><span class="opacity-75">disabled</span></li>
+									<li><strong>Background color</strong><br/><span class="opacity-75">Default</span></li>
+								</ul>
+							</div>
+						</div>
+						<!-- END OFFCANVAS DEMO LEFT -->
+
+					</div><!--end .offcanvas-->
+					<!-- END OFFCANVAS LEFT -->
+
+				</div>
+				<!-- END OF BASE -->
+
+			</div>
+
+		</section>
+	</div>
+
+</template>
